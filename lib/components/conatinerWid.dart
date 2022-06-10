@@ -34,7 +34,7 @@ class ResultCard extends StatelessWidget {
   final _w = MediaQuery.of(context).size.width;
 
   return Container(
-      height: _h*0.50,
+      height: _h*0.45,
       width: _w*0.9,
       child: child,
       decoration: BoxDecoration(
