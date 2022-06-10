@@ -64,6 +64,7 @@ BMI_Result_Page({this.bmiResult,this.resultText,this.suggestion});
               width: _w*0.8,
               decoration: BoxDecoration(
                 color: Colors.orange[900],
+                boxShadow: [kBtnBoxShadow]
               ),
               child: Text(suggestion,style: kBMIsuggest, textAlign: TextAlign.center,),
             ),
