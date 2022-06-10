@@ -50,6 +50,15 @@ BMI_Result_Page({this.bmiResult,this.resultText,this.suggestion});
 
                   Text(bmiResult,style: kBMIStyle,),
 
+
+                  Container(
+                    height: _h*0.009,
+                    width: _w*0.35,
+                    decoration: BoxDecoration(
+                      color: Colors.white70,
+                    ),
+
+                  ),
                   Spacer(flex: 2,),
 
                 ],
@@ -68,6 +77,8 @@ BMI_Result_Page({this.bmiResult,this.resultText,this.suggestion});
                 boxShadow: [kBtnBoxShadow]
               ),
               child: Text(suggestion,style: kBMIsuggest, textAlign: TextAlign.center,),
+
+
             ),
           ],
         ),
