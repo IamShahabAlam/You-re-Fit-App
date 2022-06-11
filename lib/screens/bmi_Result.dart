@@ -32,8 +32,15 @@ BMI_Result_Page({this.bmiResult,this.resultText,this.suggestion});
         Stack(
           alignment: Alignment.center ,
           children: [
-            ResultCard(
-              colour: kinactiveCardColor ,
+            Container(
+              margin: EdgeInsets.only(bottom: _h*0.1),
+              height: _h*0.45,
+              width: _w*0.9,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10.0),
+                color: kinactiveCardColor ,
+
+              ),
               child: Column(
                 // mainAxisAlignment: MainAxisAlignment.center,
                 // crossAxisAlignment: CrossAxisAlignment.center,
