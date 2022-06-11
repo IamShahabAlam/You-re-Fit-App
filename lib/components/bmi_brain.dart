@@ -27,7 +27,7 @@ class BmiCalculator {
   }
   String getSuggest(){
     if (_bmi >= 30) {
-      return "It Indicatesz that you have obesity. Your health is at risk if you don't lose weight.";
+      return "It Indicates that you have obesity. Your health is at risk if you don't lose weight.";
     } else if (_bmi >= 25){
       return "Oh ! it looks You have Forgotten your diet plan for long.";
     }else if(_bmi > 18.5){

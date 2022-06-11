@@ -27,7 +27,8 @@ BMI_Result_Page({this.bmiResult,this.resultText,this.suggestion});
       body: Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-        Expanded(child: Container( margin: EdgeInsets.only(left:30,top:25) ,child: Text("YOUR BMI",style: kresultTitle,))),
+        Expanded(child: Container( margin: EdgeInsets.only(left:30,top:25) ,
+            child: Text("YOUR BMI",style: kresultTitle,))),
         Stack(
           alignment: Alignment.center ,
           children: [
@@ -35,7 +36,7 @@ BMI_Result_Page({this.bmiResult,this.resultText,this.suggestion});
               colour: kinactiveCardColor ,
               child: Column(
                 // mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
+                // crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Spacer(),
      // Result Text
@@ -53,9 +54,9 @@ BMI_Result_Page({this.bmiResult,this.resultText,this.suggestion});
 
                   Container(
                     height: _h*0.009,
-                    width: _w*0.35,
+                    width: _w*0.4,
                     decoration: BoxDecoration(
-                      color: Colors.white70,
+                      color: Colors.white24,
                     ),
 
                   ),
@@ -68,7 +69,7 @@ BMI_Result_Page({this.bmiResult,this.resultText,this.suggestion});
             // SizedBox(height: _h*0.1,),
 
             Container(
-              margin: EdgeInsets.only(top: _h*0.5),
+              margin: EdgeInsets.only(top: _h*0.4),
               padding: const EdgeInsets.all(15.0),
               width: _w*0.8,
               decoration: BoxDecoration(
@@ -77,9 +78,7 @@ BMI_Result_Page({this.bmiResult,this.resultText,this.suggestion});
                 boxShadow: [kBtnBoxShadow]
               ),
               child: Text(suggestion,style: kBMIsuggest, textAlign: TextAlign.center,),
-
-
-            ),
+                  ),
           ],
         ),
           SizedBox(height: _h*0.05,),
