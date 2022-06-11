@@ -29,10 +29,10 @@ class ContainerWid extends StatelessWidget {
 
 
 class ResultCard extends StatelessWidget {
-  ResultCard({this.resultText, this.bmiResult, this.suggestion ,this.colour, });
+  ResultCard({this.resultText, this.bmiResult, this.suggestion ,this.bgCardClr, this.resultTextBgClr, this.suggestionBgClr  });
 
   final String resultText , bmiResult , suggestion;
-  final Color colour;
+  final Color bgCardClr, resultTextBgClr, suggestionBgClr ;
 
 @override
   Widget build(BuildContext context) {
@@ -49,18 +49,22 @@ class ResultCard extends StatelessWidget {
         width: _w*0.9,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10.0),
-          color: kinactiveCardColor ,
+          color: bgCardClr ,
 
         ),
         child: Column(
           // mainAxisAlignment: MainAxisAlignment.center,
           // crossAxisAlignment: CrossAxisAlignment.center,
+
           children: [
             Spacer(),
             // Result Text
-            Container( height: 50, width: 200, alignment: Alignment.center,
+            Container( 
+                height: _h*0.08,
+                width: _w*0.52,
+                alignment: Alignment.center,
                 decoration: BoxDecoration(
-                  color: kactiveCardColor, borderRadius: BorderRadius.circular(8),
+                  color: resultTextBgClr, borderRadius: BorderRadius.circular(8),
                   boxShadow: [kResultBoxShadow],
                 ),
                 child: Text(resultText,style: kResultTextColor ,)),
@@ -91,7 +95,7 @@ class ResultCard extends StatelessWidget {
         padding: const EdgeInsets.all(15.0),
         width: _w*0.8,
         decoration: BoxDecoration(
-            color: Colors.orange[900],
+            color: suggestionBgClr,
             borderRadius: BorderRadius.circular(8),
             boxShadow: [kBtnBoxShadow]
         ),
@@ -101,3 +105,5 @@ class ResultCard extends StatelessWidget {
   );
   }
 }
+
+// ===================================================================

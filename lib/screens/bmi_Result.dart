@@ -27,16 +27,21 @@ BMI_Result_Page({this.bmiResult,this.resultText,this.suggestion});
       body: Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-        Expanded(child: Container( margin: EdgeInsets.only(left:30,top:25) ,
+
+          Expanded(child: Container( margin: EdgeInsets.only(left:30,top:25) ,
             child: Text("YOUR BMI",style: kresultTitle,))),
 
         ResultCard(
           bmiResult: bmiResult,
           resultText: resultText,
           suggestion: suggestion,
+          bgCardClr: kinactiveCardColor,
+          resultTextBgClr: kactiveCardColor,
+          suggestionBgClr: Colors.orange[900],
         ),
 
           SizedBox(height: _h*0.05,),
+
       BottomButton(buttonTitle: "RE CALCULATE",
         color: Colors.orange,
         onTap: (){Navigator.pop(context);},)
