@@ -29,65 +29,13 @@ BMI_Result_Page({this.bmiResult,this.resultText,this.suggestion});
         children: [
         Expanded(child: Container( margin: EdgeInsets.only(left:30,top:25) ,
             child: Text("YOUR BMI",style: kresultTitle,))),
-        Stack(
-          alignment: Alignment.center ,
-          children: [
-            Container(
-              margin: EdgeInsets.only(bottom: _h*0.1),
-              height: _h*0.45,
-              width: _w*0.9,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10.0),
-                color: kinactiveCardColor ,
 
-              ),
-              child: Column(
-                // mainAxisAlignment: MainAxisAlignment.center,
-                // crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Spacer(),
-     // Result Text
-                  Container( height: 50, width: 200, alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                        color: kactiveCardColor, borderRadius: BorderRadius.circular(8),
-                        boxShadow: [kResultBoxShadow],
-                      ),
-                      child: Text(resultText,style: kResultTextColor ,)),
-
-                  Spacer(),
-
-                  Text(bmiResult,style: kBMIStyle,),
-
-
-                  Container(
-                    height: _h*0.009,
-                    width: _w*0.4,
-                    decoration: BoxDecoration(
-                      color: Colors.white24,
-                    ),
-
-                  ),
-                  Spacer(flex: 2,),
-
-                ],
-              ),
-              ),
-
-            // SizedBox(height: _h*0.1,),
-
-            Container(
-              margin: EdgeInsets.only(top: _h*0.4),
-              padding: const EdgeInsets.all(15.0),
-              width: _w*0.8,
-              decoration: BoxDecoration(
-                color: Colors.orange[900],
-                borderRadius: BorderRadius.circular(8),
-                boxShadow: [kBtnBoxShadow]
-              ),
-              child: Text(suggestion,style: kBMIsuggest, textAlign: TextAlign.center,),
-                  ),
-          ],
+        ResultCard(
+          bmiResult: bmiResult,
+          resultText: resultText,
+          suggestion: suggestion,
         ),
+
           SizedBox(height: _h*0.05,),
       BottomButton(buttonTitle: "RE CALCULATE",
         color: Colors.orange,
