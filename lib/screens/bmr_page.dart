@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:youre_fit/components/bmr_brain.dart';
 import 'package:youre_fit/components/buttons.dart';
-import 'package:youre_fit/components/conatinerWid.dart';
+import 'package:youre_fit/components/conatiners.dart';
 import 'package:youre_fit/components/icon_content.dart';
 import 'package:youre_fit/screens/bmr_Result.dart';
 import 'package:youre_fit/components/constants.dart';
