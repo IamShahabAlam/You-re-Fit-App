@@ -51,7 +51,7 @@ class _BMR_PageState extends State<BMR_Page> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xffe3dcdc) ,
-      appBar: AppBar(
+      appBar: AppBar( backgroundColor: kinactiveCardColor,
         title: Center(child: Text("basal metabolic rate".toUpperCase(), style: kBMIAppBar,)),
         leadingWidth: 40.0,
         centerTitle: true,
@@ -79,8 +79,8 @@ class _BMR_PageState extends State<BMR_Page> {
                   });
                 },
                 colour: selectedGender == Gender.male
-                    ? kBMRactiveCardColor
-                    : kinactiveCardColor,
+                    ? kinactiveCardColor
+                    : kactiveCardColor,
                 cardChild: IconContent(
                   icon: FontAwesomeIcons.mars,
                   label: "MALE",
@@ -100,8 +100,8 @@ class _BMR_PageState extends State<BMR_Page> {
                       });
                     },
                     colour: selectedGender == Gender.female
-                        ? kBMRactiveCardColor
-                        : kinactiveCardColor,
+                        ? kinactiveCardColor
+                        : kactiveCardColor,
                     cardChild: IconContent(
                       icon: FontAwesomeIcons.venus,
                       label: "FEMALE",
@@ -111,7 +111,7 @@ class _BMR_PageState extends State<BMR_Page> {
           )),
           Expanded(
             child: ContainerWid(
-              colour: kinactiveCardColor,
+              colour: kactiveCardColor,
               cardChild: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -135,15 +135,13 @@ class _BMR_PageState extends State<BMR_Page> {
                   SliderTheme( data: SliderTheme.of(context).copyWith(
                     thumbShape: RoundSliderThumbShape(enabledThumbRadius: 12),
                     overlayShape: RoundSliderOverlayShape(overlayRadius: 30),
-                    // overlayColor: Colors.white10,
-                    thumbColor: Colors.blue,
-                    activeTrackColor: Colors.blue
-                  ),
-                    child: Slider(value: height.toDouble(), 
+
+                 ),
+                    child: Slider(value: height.toDouble(),
                     min: 3.0 ,
                     max: 7.0,
-                    activeColor: Colors.blue ,
-                    inactiveColor: Colors.blue[900] ,
+                    activeColor: kinactiveCardColor ,
+                    inactiveColor: Color(0xFFFFFFFF) ,
                     onChanged: (double newValue){
                       setState(() {
                             height = newValue;
@@ -163,7 +161,7 @@ class _BMR_PageState extends State<BMR_Page> {
                   Expanded(
                       flex: 1,
                       child: ContainerWid(
-                        colour: kinactiveCardColor,
+                        colour: kactiveCardColor,
                         cardChild: Column( mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text("WEIGHT",style: klabelTextStyle,),
@@ -222,7 +220,7 @@ class _BMR_PageState extends State<BMR_Page> {
                   Expanded(
                       flex: 1,
                       child: ContainerWid(
-                        colour: kinactiveCardColor,
+                        colour: kactiveCardColor,
                         cardChild: Column( mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text("AGE",style: klabelTextStyle,),
@@ -323,7 +321,7 @@ class _BMR_PageState extends State<BMR_Page> {
 
             },
            
-            color: Color(0xff2a2878),
+            color: kinactiveCardColor,
           buttonTitle: "CALCULATE BMR",)
         ],
       ),
@@ -378,10 +376,10 @@ class _RoundIconButtonState extends State<RoundIconButton> {
       child: Container(
         constraints: BoxConstraints.tightFor( width:50, height: 50 ),
         decoration: BoxDecoration(
-          color: Color(0xff2a2878),
+          color: kinactiveCardColor,
           shape: BoxShape.circle,
         ),
-        child: Icon(widget.icon,color: Colors.blue,) ,
+        child: Icon(widget.icon,color: Colors.black,) ,
       ),
     );
   }

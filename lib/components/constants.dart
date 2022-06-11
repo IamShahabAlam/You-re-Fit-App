@@ -37,6 +37,6 @@ const kResultBoxShadow = BoxShadow(color: Color(0x95B1AFAF), spreadRadius: 0.5 ,
 
  const kBMRbbs = TextStyle(color: Colors.black,fontWeight: FontWeight.w900,fontSize: 24);
 
- const kBMRactiveCardColor = Color(0xff2a2878);   
+ const kBMRactiveCardColor = Color(0xFFE65100);
  
          
