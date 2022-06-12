@@ -2,14 +2,14 @@ import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:motion_toast/motion_toast.dart';
+import 'package:motion_toast/resources/arrays.dart';
 import 'package:youre_fit/components/bmr_brain.dart';
 import 'package:youre_fit/components/buttons.dart';
 import 'package:youre_fit/components/conatiners.dart';
 import 'package:youre_fit/components/icon_content.dart';
 import 'package:youre_fit/screens/bmr_Result.dart';
 import 'package:youre_fit/components/constants.dart';
-import 'package:fluttertoast/fluttertoast.dart';
-
 import 'home.dart';
 
 enum Gender {
@@ -299,21 +299,32 @@ class _BMR_PageState extends State<BMR_Page> {
               ));
             } else {
 
-              showCupertinoDialog( context: context,      // Cupertino (Ios)
-              builder: (BuildContext comtext){
-               return CupertinoAlertDialog(
-                  // elevation: 10,
-                  // backgroundColor: Colors.blueGrey[800],
-                  // titleTextStyle: TextStyle(color: Colors.white , fontWeight: FontWeight.bold , fontSize: 28),
-                  // contentTextStyle: TextStyle(color: Colors.white),
-                  title: Text("Error"),
-                  content: Text("Please select the Gender." ),
-                  actions: [
-                    TextButton(onPressed: (){ Navigator.pop(context);}, child: Text("OK", style: TextStyle( fontSize: 18 ,color: Colors.blue),)),
-                  ],
-                );
-              },
-              );
+              MotionToast.error(
+                title: Text("Error"),
+                description: Text("Please Select the Gender."),
+                width: 300.0,
+                // height: 220.0,
+                animationType: AnimationType.fromLeft,
+
+
+
+              ).show(context);
+
+              // showCupertinoDialog( context: context,      // Cupertino (Ios)
+              // builder: (BuildContext comtext){
+              //  return CupertinoAlertDialog(
+              //     // elevation: 10,
+              //     // backgroundColor: Colors.blueGrey[800],
+              //     // titleTextStyle: TextStyle(color: Colors.white , fontWeight: FontWeight.bold , fontSize: 28),
+              //     // contentTextStyle: TextStyle(color: Colors.white),
+              //     title: Text("Error"),
+              //     content: Text("Please select the Gender." ),
+              //     actions: [
+              //       TextButton(onPressed: (){ Navigator.pop(context);}, child: Text("OK", style: TextStyle( fontSize: 18 ,color: Colors.blue),)),
+              //     ],
+              //   );
+              // },
+              // );
 
               print("***ERROR*** \n No Gender is Selected");
             }
