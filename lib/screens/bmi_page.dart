@@ -64,9 +64,7 @@ class _BMI_PageState extends State<BMI_Page> {
         title: Center(child: Text("Body Mass Index".toUpperCase(), style: kBMIAppBar,)),
         leadingWidth: 40.0,
         centerTitle: true,
-        leading: TextButton(
-          onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => Home()));},
-            child: Icon(FontAwesomeIcons.home, color: Colors.white, size: 20 ,)
+        leading: AppbarLead(icon: FontAwesomeIcons.home , page: Home(),
         ),
       ),
       body: Column(

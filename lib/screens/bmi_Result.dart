@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:youre_fit/components/buttons.dart';
 import 'package:youre_fit/components/conatiners.dart';
 import 'package:youre_fit/components/constants.dart';
+import 'package:youre_fit/screens/bmi_page.dart';
 
  
  class BMI_Result_Page extends StatelessWidget {
@@ -22,7 +23,9 @@ BMI_Result_Page({this.bmiResult,this.resultText,this.suggestion});
   backgroundColor: Color(0xFFF3E6D8),
       appBar: AppBar(
         backgroundColor: kactiveCardColor,
-        title: Center(child: Text("BMI Results".toUpperCase(), style: kBMIAppBar,),),),
+        title: Center(child: Text("BMI Results".toUpperCase(), style: kBMIAppBar,),),
+        leading: AppbarLead(icon: Icons.arrow_back_ios , page: BMI_Page() ,),
+      ),
 
       body: Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       crossAxisAlignment: CrossAxisAlignment.stretch,

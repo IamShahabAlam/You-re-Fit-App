@@ -59,11 +59,7 @@ class _BMR_PageState extends State<BMR_Page> {
         title: Center(child: Text("basal metabolic rate".toUpperCase(), style: kBMIAppBar,)),
         leadingWidth: 40.0,
         centerTitle: true,
-        leading: TextButton(
-            onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => Home()));},
-            child:
-            Icon(FontAwesomeIcons.home, color: Colors.white, size: 20 ,)
-        ),
+        leading: AppbarLead(icon: FontAwesomeIcons.home , page: Home(),)
       ),
       body: Column(
         children: [

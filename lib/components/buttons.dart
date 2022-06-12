@@ -1,6 +1,25 @@
 import 'package:flutter/material.dart';
 import 'constants.dart';
 
+class AppbarLead extends StatelessWidget {
+
+ AppbarLead({this.icon, this.page });
+
+ final IconData icon;
+ final Widget page;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => page ));},
+      child: Icon(icon, color: Colors.white,),
+    );
+  }
+}
+
+// =====================================================================
+
+
 class BottomButton extends StatelessWidget {
 
   BottomButton({this.buttonTitle,this.onTap, this.color});

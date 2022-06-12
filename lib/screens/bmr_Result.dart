@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:youre_fit/components/buttons.dart';
 import 'package:youre_fit/components/conatiners.dart';
 import 'package:youre_fit/components/constants.dart';
+import 'package:youre_fit/screens/bmr_page.dart';
 
 
 class BMR_Result_Page extends StatelessWidget {
@@ -23,7 +24,9 @@ class BMR_Result_Page extends StatelessWidget {
       Scaffold(
         backgroundColor: kBG,
         appBar: AppBar( backgroundColor: kinactiveCardColor,
-          title: Center(child: Text("BMR Results".toUpperCase(), style: kBMIAppBar,),),),
+          title: Center(child: Text("BMR Results".toUpperCase(), style: kBMIAppBar,),),
+          leading: AppbarLead(icon: Icons.arrow_back_ios, page: BMR_Page(),),
+        ),
 
         body: Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.stretch,

@@ -60,6 +60,6 @@ class MyApp extends StatelessWidget {
 //=============== Color Theme ================
 // Bg Color  Color(0xFFF3E8DB)
 // main color Color(0xFFFF9800) or Colors.orange[500]
-// Dark main Colors.orange[900]
+// Dark main Color(0xFFE65100) or Colors.orange[900]
 // grey color Color(0xFF7E7777)
 // Dark grey color Color(0xFF3D4348)
