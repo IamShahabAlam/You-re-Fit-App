@@ -306,15 +306,17 @@ class _BMR_PageState extends State<BMR_Page> {
 // Motion Toast
               MotionToast.error(
                 width: _w*0.8,
-                height: _h*0.15,
-                title: Text("Error"),
-                description: Text("Please Select the Gender."),
-                animationType: AnimationType.fromLeft,
-                dismissable: true,
+                height: _h*0.12,
+                title: Text("Error", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+                description: Text("Please Select the Gender.", style: TextStyle(fontSize: 16,),),
+                animationType: AnimationType.fromTop,
                 position: MotionToastPosition.top,
-
-
-
+                borderRadius: 10.0,
+                iconSize: 45.0,
+                barrierColor: Colors.black26,
+                toastDuration: Duration(seconds: 2),
+                layoutOrientation: ToastOrientation.ltr,
+                // animationCurve: Curves.elasticOut
               ).show(context);
 
               // showCupertinoDialog( context: context,      // Cupertino (Ios)
