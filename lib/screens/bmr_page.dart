@@ -49,6 +49,10 @@ class _BMR_PageState extends State<BMR_Page> {
 
   @override
   Widget build(BuildContext context) {
+
+    final _h = MediaQuery.of(context).size.height;
+    final _w = MediaQuery.of(context).size.width;
+
     return Scaffold(
       backgroundColor: Color(0xffe3dcdc) ,
       appBar: AppBar( backgroundColor: kinactiveCardColor,
@@ -299,12 +303,15 @@ class _BMR_PageState extends State<BMR_Page> {
               ));
             } else {
 
+// Motion Toast
               MotionToast.error(
+                width: _w*0.8,
+                height: _h*0.15,
                 title: Text("Error"),
                 description: Text("Please Select the Gender."),
-                width: 300.0,
-                // height: 220.0,
                 animationType: AnimationType.fromLeft,
+                dismissable: true,
+                position: MotionToastPosition.top,
 
 
 
