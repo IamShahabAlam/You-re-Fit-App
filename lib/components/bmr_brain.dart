@@ -15,7 +15,7 @@ class BmrCalculator {
 
   String calculateBMR(){
     _bmr =  value + (bmr_w * weight) + (bmr_h * (height*30.48)) - (bmr_a * age)  ;   // height multiplying with 30.48 to convert ft to cm
-    return  _bmr.toStringAsFixed(0);  // will take only  1 value after decimal i.e 20.1
+    return  _bmr.toStringAsFixed(0);  // will take no value after decimal i.e 20
   }
 
   String getResult(){

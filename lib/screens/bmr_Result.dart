@@ -14,37 +14,37 @@ class BMR_Result_Page extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    final _h = MediaQuery.of(context).size.height  ;
+    final _w = MediaQuery.of(context).size.width;
+
+
     return
       Scaffold(
-        backgroundColor: Colors.black,
-        appBar: AppBar(title: Center(child: Text("BMR Results".toUpperCase(), style: kBMIAppBar,),),),
+        backgroundColor: kBG,
+        appBar: AppBar( backgroundColor: kinactiveCardColor,
+          title: Center(child: Text("BMR Results".toUpperCase(), style: kBMIAppBar,),),),
 
         body: Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Expanded(child: Container( margin: EdgeInsets.only(left:30,top:25) ,child: Text("YOUR BMR",style: kresultTitle,))),
-            Expanded(flex: 5, child: Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: ContainerWid(
-                colour: Colors.grey[900] ,
-                cardChild: Column( mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Text(resultText,style: kResultTextColor ,),
 
-                    Text(bmrResult,style: kBMIStyle,),
-
-                    Padding(
-                      padding: const EdgeInsets.all(15.0),
-                      child: Text(suggestion,style: kBMIsuggest, textAlign: TextAlign.center,),
-                    )
-                  ],
-                ),
-              ),
-            ),
+            ResultCard(
+              bgCardClr: kinactiveCardColor,
+              resultTextBgClr: kactiveCardColor,
+              suggestionBgClr: kBMRactiveCardColor,
+              suggestion: suggestion,
+              resultText: resultText,
+              resultValue: bmrResult,
             ),
 
-            BottomButton(buttonTitle: "RE CALCULATE", onTap: (){Navigator.pop(context);},)
+
+            SizedBox(height: _h*0.05,),
+
+            BottomButton(
+              color: kinactiveCardColor,
+              buttonTitle: "RE CALCULATE", onTap: (){Navigator.pop(context);},)
           ],),
 
       );

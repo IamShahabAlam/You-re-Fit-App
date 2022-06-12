@@ -29,9 +29,9 @@ class ContainerWid extends StatelessWidget {
 
 
 class ResultCard extends StatelessWidget {
-  ResultCard({this.resultText, this.bmiResult, this.suggestion ,this.bgCardClr, this.resultTextBgClr, this.suggestionBgClr  });
+  ResultCard({this.resultText, this.resultValue, this.suggestion ,this.bgCardClr, this.resultTextBgClr, this.suggestionBgClr  });
 
-  final String resultText , bmiResult , suggestion;
+  final String resultText , resultValue , suggestion;
   final Color bgCardClr, resultTextBgClr, suggestionBgClr ;
 
 @override
@@ -71,7 +71,7 @@ class ResultCard extends StatelessWidget {
 
             Spacer(),
 
-            Text(bmiResult,style: kBMIStyle,),
+            Text(resultValue,style: kBMIStyle,),
 
 
             Container(

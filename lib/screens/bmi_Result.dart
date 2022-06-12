@@ -32,7 +32,7 @@ BMI_Result_Page({this.bmiResult,this.resultText,this.suggestion});
             child: Text("YOUR BMI",style: kresultTitle,))),
 
         ResultCard(
-          bmiResult: bmiResult,
+          resultValue: bmiResult,
           resultText: resultText,
           suggestion: suggestion,
           bgCardClr: kinactiveCardColor,
