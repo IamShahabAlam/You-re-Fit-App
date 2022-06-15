@@ -286,6 +286,9 @@ class _BMR_PageState extends State<BMR_Page> {
           ),
 
           BottomButton(
+            t_margin: 0.0,
+            color: kinactiveCardColor,
+            buttonTitle: "CALCULATE BMR",
             onTap: (){
             BmrCalculator calc = BmrCalculator(height: height, weight: weight , age: age , bmr_a: bmr_a , bmr_h: bmr_h , bmr_w: bmr_w , value: value);
 
@@ -295,6 +298,11 @@ class _BMR_PageState extends State<BMR_Page> {
                     bmrResult: calc.calculateBMR() ,
                     resultText: calc.getResult() ,
                     suggestion: calc.getSuggest() ,
+                    SVal: calc.SedentaryVal(),
+                    LactVal: calc.LightactiveVal(),
+                    MVal: calc.ModerateVal(),
+                    AVal: calc.ActiveVal(),
+                    IVal: calc.IntenseVal(),
                   ),
               ));
             } else {
@@ -315,46 +323,20 @@ class _BMR_PageState extends State<BMR_Page> {
                 // animationCurve: Curves.elasticOut
               ).show(context);
 
-              // showCupertinoDialog( context: context,      // Cupertino (Ios)
-              // builder: (BuildContext comtext){
-              //  return CupertinoAlertDialog(
-              //     // elevation: 10,
-              //     // backgroundColor: Colors.blueGrey[800],
-              //     // titleTextStyle: TextStyle(color: Colors.white , fontWeight: FontWeight.bold , fontSize: 28),
-              //     // contentTextStyle: TextStyle(color: Colors.white),
-              //     title: Text("Error"),
-              //     content: Text("Please select the Gender." ),
-              //     actions: [
-              //       TextButton(onPressed: (){ Navigator.pop(context);}, child: Text("OK", style: TextStyle( fontSize: 18 ,color: Colors.blue),)),
-              //     ],
-              //   );
-              // },
-              // );
 
               print("***ERROR*** \n No Gender is Selected");
             }
-
-
             },
-           
-            color: kinactiveCardColor,
-          buttonTitle: "CALCULATE BMR",)
+          ),
         ],
       ),
     );
   }
 }
 
-// Fluttertoast.showToast(                  // Tried this toast to display the ERROR. (Failed)
-// msg: "Please select the Gender",
-// fontSize: 15,
-// backgroundColor: Colors.grey[700],
-// gravity: ToastGravity.SNACKBAR,
-// toastLength: Toast.LENGTH_SHORT,
-// );
 
+// =================================================
 
-// =========================================
 
 class RoundIconButton extends StatefulWidget {
 

@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'constants.dart';
@@ -25,7 +26,7 @@ class ContainerWid extends StatelessWidget {
 
 
 // ===================================================================
-
+// For BMI
 
 
 class ResultCard extends StatelessWidget {
@@ -67,7 +68,7 @@ class ResultCard extends StatelessWidget {
                   color: resultTextBgClr, borderRadius: BorderRadius.circular(8),
                   boxShadow: [kResultBoxShadow],
                 ),
-                child: Text(resultText,style: kResultTextColor ,)),
+                child: Text(resultText,style: kResultText ,)),
 
             Spacer(),
 
@@ -106,4 +107,107 @@ class ResultCard extends StatelessWidget {
   }
 }
 
+
 // ===================================================================
+// For BMR
+
+
+class BMRResultCard extends StatelessWidget {
+  BMRResultCard({this.topText,this.Active_Value,this.Intense_Value,this.Lactive_Value, this.Moderate_Value, this.Sed_Value});
+
+  final String topText;
+  final String Sed_Value , Lactive_Value, Moderate_Value , Active_Value , Intense_Value ;
+
+  @override
+  Widget build(BuildContext context) {
+
+    final _h = MediaQuery.of(context).size.height  ;
+    final _w = MediaQuery.of(context).size.width;
+
+
+    return SizedBox( height: _h*0.64, width: _w*1,
+      child: Stack( alignment: Alignment.center,
+        children: [
+
+// Grey Card BG
+          Positioned( top: 55.0,
+            child: Container(
+              // margin: EdgeInsets.only(bottom: _h*0.1),
+              height: _h*0.52,
+              width: _w*0.9,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10.0),
+                color: kinactiveCardColor ,),
+              child: Column( mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  SizedBox(height: 0.0,),
+                  Row( mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                    Text("Activity Level" ,style: kbbs,), Text("Calorie",style: kbbs,)
+                ],),
+
+                  ActivityRow(name: "Sedentary" , value: Sed_Value,),
+                  ActivityRow(name: "Lightly active" , value: Lactive_Value,),
+                  ActivityRow(name: "Moderate" , value: Moderate_Value ,),
+                  ActivityRow(name: "Active" , value: Active_Value,),
+                  ActivityRow(name: "Intense" , value: Intense_Value,),
+
+
+
+              ],),
+            ),
+          ),
+
+          Positioned( top: 0.0,
+              child: Container(
+                // margin: EdgeInsets.only(top: _h*0.4),
+                padding: const EdgeInsets.all(15.0),
+                width: _w*0.8,
+                decoration: BoxDecoration(
+                    color: kBMRactiveCardColor,
+                    borderRadius: BorderRadius.circular(8),
+                    boxShadow: [kBtnBoxShadow]
+                ),
+                child: Text(topText,style: kBMRTopText, textAlign: TextAlign.center,),
+              ),
+            ),
+
+
+
+      ],),
+    );
+  }
+}
+
+
+// ===================================================================
+
+
+class ActivityRow extends StatelessWidget {
+ ActivityRow({this.name , this.value });
+
+ final String name;
+ final String value;
+
+  @override
+  Widget build(BuildContext context) {
+    return    Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Container( margin: EdgeInsets.only(left: 30),
+            child: Text(name , style: KResultActivity,)),
+
+        Container(
+            margin: EdgeInsets.only(right: 30),
+            padding: EdgeInsets.symmetric(vertical: 4.0 , horizontal: 25.0),
+            // height: _h*0.08,
+            // width: _w*0.52,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              color: kBG, borderRadius: BorderRadius.circular(8),
+              boxShadow: [kResultBoxShadow],
+            ),
+            child: Text(value,style: kResultCalories ,)),
+      ],);
+  }
+}

@@ -22,11 +22,12 @@ class AppbarLead extends StatelessWidget {
 
 class BottomButton extends StatelessWidget {
 
-  BottomButton({this.buttonTitle,this.onTap, this.color});
+  BottomButton({this.buttonTitle,this.onTap, this.color, this.t_margin});
 
   final Function onTap;
-  final String buttonTitle ;
+  final String buttonTitle;
   final Color color;
+  final double t_margin;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -40,7 +41,7 @@ class BottomButton extends StatelessWidget {
             )
         ),
         child: Center(child: Text(buttonTitle,style:kbbs,)),
-        margin: EdgeInsets.only(top: 10),
+        margin: EdgeInsets.only(top: t_margin),
         height: kbch,
         width: double.infinity,
         

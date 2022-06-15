@@ -18,7 +18,7 @@ const kbbs = TextStyle(color: Colors.black,fontWeight: FontWeight.w900,fontSize:
 
 const kresultTitle = TextStyle(color: Color(0xFFFF6C00),fontWeight: FontWeight.w900,fontSize: 44);
 
-const kResultTextColor = TextStyle(color: kBG, fontSize: 25, fontWeight: FontWeight.bold);
+const kResultText = TextStyle(color: kBG, fontSize: 25, fontWeight: FontWeight.bold);
 
 const kBMIStyle = TextStyle(fontSize: 90, fontWeight: FontWeight.bold, color:Color(0xFF1B1F22) );
 
@@ -38,5 +38,9 @@ const kResultBoxShadow = BoxShadow(color: Color(0x95B1AFAF), spreadRadius: 0.5 ,
  const kBMRbbs = TextStyle(color: Colors.black,fontWeight: FontWeight.w900,fontSize: 24);
 
  const kBMRactiveCardColor = Color(0xFFE65100);
- 
-         
+
+const kBMRTopText = TextStyle(fontSize: 18.5, color: kBG  );
+
+const kResultCalories = TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold);
+
+const KResultActivity = TextStyle(color: kBG, fontSize: 20, fontWeight: FontWeight.bold);

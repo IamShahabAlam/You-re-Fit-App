@@ -45,7 +45,8 @@ BMI_Result_Page({this.bmiResult,this.resultText,this.suggestion});
 
           SizedBox(height: _h*0.05,),
 
-      BottomButton(buttonTitle: "RE CALCULATE",
+      BottomButton(t_margin: 10.0,
+        buttonTitle: "RE CALCULATE",
         color: Colors.orange,
         onTap: (){Navigator.pop(context);},)
       ],),

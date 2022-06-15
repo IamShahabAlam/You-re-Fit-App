@@ -281,7 +281,9 @@ class _BMI_PageState extends State<BMI_Page> {
                 ],
               )),
 
-          BottomButton(onTap: (){
+          BottomButton(
+            t_margin: 10,
+            onTap: (){
             BmiCalculator calc = BmiCalculator(height: height, weight: weight);
             Navigator.push(context, MaterialPageRoute(builder: (context) =>
                 // BMR_Page(),

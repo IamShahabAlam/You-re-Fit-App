@@ -13,9 +13,41 @@ class BmrCalculator {
   double bmr_a ;
   double _bmr ;
 
+  // Activity Levels
+  double SedVal;
+  double LactiveVal;
+  double ModVal;
+  double ActVal;
+  double IntVal ;
+
   String calculateBMR(){
     _bmr =  value + (bmr_w * weight) + (bmr_h * (height*30.48)) - (bmr_a * age)  ;   // height multiplying with 30.48 to convert ft to cm
     return  _bmr.toStringAsFixed(0);  // will take no value after decimal i.e 20
+  }
+
+  String SedentaryVal(){
+    SedVal = _bmr*1.2;
+    return SedVal.toStringAsFixed(0);
+  }
+
+  String LightactiveVal(){
+    LactiveVal = _bmr*1.375;
+    return LactiveVal.toStringAsFixed(0);
+  }
+
+  String ModerateVal(){
+    ModVal = _bmr*1.55;
+    return ModVal.toStringAsFixed(0);
+  }
+
+  String ActiveVal(){
+    ActVal = _bmr*1.725;
+    return ActVal.toStringAsFixed(0);
+  }
+
+  String IntenseVal(){
+    IntVal = _bmr*1.9;
+    return IntVal.toStringAsFixed(0);
   }
 
   String getResult(){
@@ -27,6 +59,7 @@ class BmrCalculator {
       return "UNDERWEIGHT";
     }
   }
+
   String getSuggest(){
     if (_bmr >= 25){
       return "Oh ! it looks You have Forgotten your diet plan for long.";
