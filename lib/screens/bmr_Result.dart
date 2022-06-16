@@ -3,6 +3,7 @@ import 'package:youre_fit/components/buttons.dart';
 import 'package:youre_fit/components/conatiners.dart';
 import 'package:youre_fit/components/constants.dart';
 import 'package:youre_fit/screens/bmr_page.dart';
+import 'package:youre_fit/screens/gain_Page.dart';
 import 'package:youre_fit/screens/loss_Page.dart';
 
 
@@ -80,10 +81,24 @@ class BMR_Result_Page extends StatelessWidget {
               //   color: kinactiveCardColor,
               //   buttonTitle: "RE CALCULATE", onTap: (){Navigator.pop(context);},)
 
-              HomeBtn(
-                 name: "Weight Loss",
-                screen: Weight_Loss(),
-                firstClr: Color(0xFFFF9800) ,
+              Row( mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  HomeBtn(heightB: 0.08, widthB: 0.4 ,
+                    t_margin: 0.0,
+                     name: "Weight Loss",
+                    screen: Weight_Loss(),
+                    firstClr: Colors.blueGrey[800] ,
+                    lastClr : Color(0xFFE65100),
+                  ),
+
+                  HomeBtn(heightB: 0.08, widthB: 0.4 ,
+                    t_margin: 0.0,
+                    name: "Weight Gain",
+                    screen: Weight_Gain(),
+                    firstClr: Color(0xFFE65100) ,
+                    lastClr : Colors.blueGrey[800],
+                  ),
+                ],
               )
 
             ],),

@@ -54,19 +54,22 @@ class BottomButton extends StatelessWidget {
 
 
 class HomeBtn extends StatelessWidget {
-  const HomeBtn({  double h, double w,this.t_margin, this.name , this.screen, this.firstClr, this.lastClr}) : _h = h, _w = w ;
+  const HomeBtn({ this.t_margin, this.name , this.screen, this.firstClr, this.lastClr,this.heightB,this.widthB});
 
-  final double _h,_w, t_margin ;
+  final double  t_margin, heightB ,widthB ;
   final String name ;
   final Widget screen ;
   final Color firstClr, lastClr;
 
   @override
   Widget build(BuildContext context) {
+    final _h = MediaQuery.of(context).size.height;
+    final _w = MediaQuery.of(context).size.width;
+
     return Container(
       margin: EdgeInsets.only(top: _h*t_margin),
-      height: _h*0.08,
-      width: _w*0.6,
+      height: _h*heightB,
+      width: _w*widthB,
       decoration: BoxDecoration(
         boxShadow: [ kBtnBoxShadow],
         borderRadius: BorderRadius.circular(30),

@@ -10,6 +10,7 @@ class Home extends StatelessWidget {
 
     final _h = MediaQuery.of(context).size.height;
     final _w = MediaQuery.of(context).size.width;
+
     return Scaffold(
       backgroundColor: kBG,
       body: SafeArea(
@@ -30,7 +31,9 @@ class Home extends StatelessWidget {
             ),
 
 // BMI Button
-            HomeBtn(h: _h, w: _w ,
+            HomeBtn(
+              heightB: 0.08,
+              widthB: 0.6,
               name: "Body Mass Index",
               screen: BMI_Page(),
               t_margin: 0.04,
@@ -39,7 +42,9 @@ class Home extends StatelessWidget {
             ),
 
 // BMR Button
-            HomeBtn(h: _h, w: _w,
+            HomeBtn(
+              heightB: 0.08,
+              widthB: 0.6,
             name: "Basal Metabolic Rate",
               t_margin: 0.04,
               screen: BMR_Page(),
