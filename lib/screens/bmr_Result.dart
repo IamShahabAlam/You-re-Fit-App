@@ -74,10 +74,16 @@ class BMR_Result_Page extends StatelessWidget {
 
               // SizedBox(height: _h*0.04,),
 
-              BottomButton(
-                t_margin: 5.0,
-                color: kinactiveCardColor,
-                buttonTitle: "RE CALCULATE", onTap: (){Navigator.pop(context);},)
+              // BottomButton(
+              //   t_margin: 5.0,
+              //   color: kinactiveCardColor,
+              //   buttonTitle: "RE CALCULATE", onTap: (){Navigator.pop(context);},)
+
+              HomeBtn(
+                  h: h,
+                  w: w
+              )
+
             ],),
         ),
 
