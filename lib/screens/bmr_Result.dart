@@ -56,7 +56,7 @@ class BMR_Result_Page extends StatelessWidget {
               // ResultCard(
               //   bgCardClr: kinactiveCardColor,
               //   resultTextBgClr: kactiveCardColor,
-              //   suggestionBgClr: kBMRactiveCardColor,
+              //   suggestionBgClr: kBMRactiveCardColor,0
               //   suggestion: suggestion,
               //   resultText: resultText,
               //   resultValue: bmrResult,
