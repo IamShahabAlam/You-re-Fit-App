@@ -211,3 +211,21 @@ class ActivityRow extends StatelessWidget {
       ],);
   }
 }
+
+
+// ===================================================================
+
+
+class Guide_List extends StatelessWidget {
+
+  // Guide_List({});
+
+   @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+
+      ],
+    );
+  }
+}

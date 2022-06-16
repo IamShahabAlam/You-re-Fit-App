@@ -44,3 +44,10 @@ const kBMRTopText = TextStyle(fontSize: 18.5, color: kBG  );
 const kResultCalories = TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold);
 
 const KResultActivity = TextStyle(color: kBG, fontSize: 20, fontWeight: FontWeight.bold);
+
+
+// ======================== Weight Guide constants ====================
+
+
+
+const kweightGuide = TextStyle(color: Color(0xFFFF6C00),fontWeight: FontWeight.w900,fontSize: 35);
