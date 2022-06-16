@@ -34,8 +34,8 @@ class Home extends StatelessWidget {
               name: "Body Mass Index",
               screen: BMI_Page(),
               t_margin: 0.04,
-              begin: Alignment.centerLeft ,
-              end: Alignment.centerRight ,
+              firstClr: Colors.orange[500],
+              lastClr : Colors.blueGrey[800],
             ),
 
 // BMR Button
@@ -43,8 +43,8 @@ class Home extends StatelessWidget {
             name: "Basal Metabolic Rate",
               t_margin: 0.04,
               screen: BMR_Page(),
-              begin: Alignment.centerRight,
-              end: Alignment.centerLeft,
+              lastClr: Colors.orange[500],
+              firstClr: Colors.blueGrey[800],
             ),
 
             

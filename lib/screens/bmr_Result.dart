@@ -3,6 +3,7 @@ import 'package:youre_fit/components/buttons.dart';
 import 'package:youre_fit/components/conatiners.dart';
 import 'package:youre_fit/components/constants.dart';
 import 'package:youre_fit/screens/bmr_page.dart';
+import 'package:youre_fit/screens/loss_Page.dart';
 
 
 class BMR_Result_Page extends StatelessWidget {
@@ -80,8 +81,9 @@ class BMR_Result_Page extends StatelessWidget {
               //   buttonTitle: "RE CALCULATE", onTap: (){Navigator.pop(context);},)
 
               HomeBtn(
-                  h: h,
-                  w: w
+                 name: "Weight Loss",
+                screen: Weight_Loss(),
+                firstClr: Color(0xFFFF9800) ,
               )
 
             ],),

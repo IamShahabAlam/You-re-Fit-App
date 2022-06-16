@@ -54,12 +54,12 @@ class BottomButton extends StatelessWidget {
 
 
 class HomeBtn extends StatelessWidget {
-  const HomeBtn({ @required double h, @required double w,this.t_margin, this.name , this.screen,this.begin, this.end}) : _h = h, _w = w ;
+  const HomeBtn({  double h, double w,this.t_margin, this.name , this.screen, this.firstClr, this.lastClr}) : _h = h, _w = w ;
 
   final double _h,_w, t_margin ;
   final String name ;
   final Widget screen ;
-  final Alignment begin, end;
+  final Color firstClr, lastClr;
 
   @override
   Widget build(BuildContext context) {
@@ -70,7 +70,9 @@ class HomeBtn extends StatelessWidget {
       decoration: BoxDecoration(
         boxShadow: [ kBtnBoxShadow],
         borderRadius: BorderRadius.circular(30),
-        gradient: LinearGradient( begin: begin, end: end ,colors: [Colors.orange[500], Colors.blueGrey[800], ]),
+        gradient: LinearGradient(
+            begin: Alignment.centerLeft , end: Alignment.centerRight ,
+            colors: [firstClr, lastClr, ]),
       ),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
