@@ -304,6 +304,10 @@ class _BMR_PageState extends State<BMR_Page> {
                     MVal: calc.ModerateVal(),
                     AVal: calc.ActiveVal(),
                     IVal: calc.IntenseVal(),
+                    MWL: calc.MildWL(),
+                    WL: calc.WeightL(),
+                    EWL: calc.ExtremeWL(),
+
                   ),
               ));
             } else {

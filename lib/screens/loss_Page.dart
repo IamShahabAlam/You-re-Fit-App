@@ -9,9 +9,9 @@ import 'package:youre_fit/components/bmr_brain.dart';
 
 
  class Weight_Loss extends StatelessWidget {
-   Weight_Loss({this.SedVal});
+   Weight_Loss({this.SedVal,this.MWL , this.WL , this.EWL});
 
-   final String SedVal;
+   final String SedVal, MWL , WL , EWL;
 
 
    @override
@@ -46,21 +46,21 @@ import 'package:youre_fit/components/bmr_brain.dart';
                ),
 
                Guide_List(
-                 type: "Maintain Weight",
-                 kgPerWeek: "0",
-                 calories: "1489",
+                 type: "Mild Weight Loss",
+                 kgPerWeek: "0.15",
+                 calories: MWL,
                ),
 
                Guide_List(
-                 type: "Maintain Weight",
-                 kgPerWeek: "0",
-                 calories: "1489",
+                 type: "Weight Loss",
+                 kgPerWeek: "0.3",
+                 calories: WL,
                ),
 
                Guide_List(
-                 type: "Maintain Weight",
-                 kgPerWeek: "0",
-                 calories: "1489",
+                 type: "Extreme Loss",
+                 kgPerWeek: "0.5",
+                 calories: EWL,
                ),
 
 
