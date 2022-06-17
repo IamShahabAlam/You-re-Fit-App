@@ -12,7 +12,8 @@ class AppbarLead extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => page ));},
+      onTap: (){Navigator.pop(context);},
+          // (){Navigator.push(context, MaterialPageRoute(builder: (context) => page ));},
       child: Icon(icon, color: color,),
     );
   }

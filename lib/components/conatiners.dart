@@ -142,9 +142,15 @@ class BMRResultCard extends StatelessWidget {
               child: Column( mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   SizedBox(height: 0.0,),
-                  Row( mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                    Text("Activity Level" ,style: kbbs,), Text("Calorie",style: kbbs,)
+
+                      Container(margin: EdgeInsets.only(left: _w*0.05),
+                          child: Text("Activity Level" ,style: kbbs,)),
+
+                      Container(margin: EdgeInsets.only(right: _w*0.08),
+                          child: Text("Calorie",style: kbbs,))
                 ],),
 
                   ActivityRow(name: "Sedentary" , value: Sed_Value,),
@@ -192,15 +198,19 @@ class ActivityRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    final _h = MediaQuery.of(context).size.height;
+    final _w = MediaQuery.of(context).size.width;
+
     return    Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Container( margin: EdgeInsets.only(left: 30),
+        Container( margin: EdgeInsets.only(left: _w*0.05),
             child: Text(name , style: KResultActivity,)),
 
         Container(
-            margin: EdgeInsets.only(right: 30),
-            padding: EdgeInsets.symmetric(vertical: 4.0 , horizontal: 25.0),
+            margin: EdgeInsets.only(right: _w*0.05),
+            padding: EdgeInsets.symmetric(vertical: _h*0.005 , horizontal: _w*0.05),
             // height: _h*0.08,
             // width: _w*0.52,
             alignment: Alignment.center,
@@ -215,7 +225,7 @@ class ActivityRow extends StatelessWidget {
 
 
 // ===================================================================
-
+// For Weight Loss
 
 class Guide_List extends StatelessWidget {
 

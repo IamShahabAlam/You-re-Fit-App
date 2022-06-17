@@ -48,10 +48,13 @@ class BMR_Result_Page extends StatelessWidget {
               Row(
                 children: [
 // TITLE
-                  Container( margin: EdgeInsets.all(20) ,child: Text("YOUR BMR",style: kresultTitle,)),
+                  Container(
+                      margin: EdgeInsets.all(20) ,
+                      child: Text("YOUR BMR",style: kresultTitle,)),
 
                   Container(
-                    padding: EdgeInsets.all(12),
+                      padding: EdgeInsets.symmetric(vertical: _h*0.01 , horizontal: _w*0.06),
+                      // padding: EdgeInsets.all(12),
                       // height: _h*0.08,
                       // width: _w*0.52,
                       alignment: Alignment.center,
@@ -91,7 +94,7 @@ class BMR_Result_Page extends StatelessWidget {
                         (){
                           // BmrCalculator calc = BmrCalculator(height: height, weight: weight , age: age , bmr_a: bmr_a , bmr_h: bmr_h , bmr_w: bmr_w , value: value);
 
-                   Navigator.push(context, MaterialPageRoute(builder: (context) => Weight_Loss(), ));},
+                   Navigator.push(context, MaterialPageRoute(builder: (context) => Weight_Loss(SedVal: SVal,), ));},
 
                     firstClr: Colors.blueGrey[800] ,
                     lastClr : Color(0xFFE65100),

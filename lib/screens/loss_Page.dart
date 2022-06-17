@@ -12,6 +12,8 @@ import 'package:youre_fit/components/bmr_brain.dart';
    Weight_Loss({this.SedVal});
 
    final String SedVal;
+
+
    @override
    Widget build(BuildContext context) {
 
@@ -19,9 +21,9 @@ import 'package:youre_fit/components/bmr_brain.dart';
      final _w = MediaQuery.of(context).size.width;
 
      return Scaffold( backgroundColor: kBG,
-       appBar: AppBar( centerTitle: true, backgroundColor: Colors.transparent, elevation: 0.0,
+       appBar: AppBar( centerTitle: true, backgroundColor: kBG, elevation: 15.0, shadowColor: kactiveCardColor,
          title: Text("Weight Loss Guide" , style: kweightGuide,),
-         leading: AppbarLead(color: kactiveCardColor , page: BMR_Result_Page(), icon: Icons.arrow_back_ios,),
+         leading: AppbarLead(color: kactiveCardColor , page: BMR_Result_Page(SVal: SedVal,), icon: Icons.arrow_back_ios,),
        ),
 
        body: Column(
@@ -40,7 +42,7 @@ import 'package:youre_fit/components/bmr_brain.dart';
                Guide_List(
                  type: "Maintain Weight",
                  kgPerWeek: "0",
-                 calories: "1489" ,
+                 calories: SedVal ,
                ),
 
                Guide_List(
