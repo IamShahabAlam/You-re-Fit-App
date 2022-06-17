@@ -3,16 +3,17 @@ import 'constants.dart';
 
 class AppbarLead extends StatelessWidget {
 
- AppbarLead({this.icon, this.page });
+ AppbarLead({this.icon, this.page, this.color });
 
  final IconData icon;
  final Widget page;
+ final Color color;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => page ));},
-      child: Icon(icon, color: Colors.white,),
+      child: Icon(icon, color: color,),
     );
   }
 }
@@ -54,11 +55,11 @@ class BottomButton extends StatelessWidget {
 
 
 class HomeBtn extends StatelessWidget {
-  const HomeBtn({ this.t_margin, this.name , this.screen, this.firstClr, this.lastClr,this.heightB,this.widthB});
+  const HomeBtn({ this.t_margin, this.name , this.onpressed, this.firstClr, this.lastClr,this.heightB,this.widthB});
 
   final double  t_margin, heightB ,widthB ;
   final String name ;
-  final Widget screen ;
+  final Function onpressed ;
   final Color firstClr, lastClr;
 
   @override
@@ -89,7 +90,8 @@ class HomeBtn extends StatelessWidget {
           primary: Colors.transparent,
           shadowColor: Colors.transparent,
         ),
-        onPressed: (){ Navigator.push(context, MaterialPageRoute(builder: (context) => screen ));},
+        onPressed: onpressed ,
+            // (){ Navigator.push(context, MaterialPageRoute(builder: (context) => screen ));},
         child: Text(name), ),
     );
   }

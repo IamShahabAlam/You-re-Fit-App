@@ -26,27 +26,27 @@ class BmrCalculator {
   }
 
   String SedentaryVal(){
-    SedVal = _bmr*1.2;
+    SedVal = _bmr*(1.2);
     return SedVal.toStringAsFixed(0);
   }
 
   String LightactiveVal(){
-    LactiveVal = _bmr*1.375;
+    LactiveVal = _bmr*(1.375);
     return LactiveVal.toStringAsFixed(0);
   }
 
   String ModerateVal(){
-    ModVal = _bmr*1.55;
+    ModVal = _bmr*(1.55);
     return ModVal.toStringAsFixed(0);
   }
 
   String ActiveVal(){
-    ActVal = _bmr*1.725;
+    ActVal = _bmr*(1.725);
     return ActVal.toStringAsFixed(0);
   }
 
   String IntenseVal(){
-    IntVal = _bmr*1.9;
+    IntVal = _bmr*(1.9);
     return IntVal.toStringAsFixed(0);
   }
 

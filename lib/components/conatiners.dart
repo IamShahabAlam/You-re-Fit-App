@@ -1,3 +1,4 @@
+import 'package:clippy_flutter/clippy_flutter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -218,14 +219,59 @@ class ActivityRow extends StatelessWidget {
 
 class Guide_List extends StatelessWidget {
 
-  // Guide_List({});
+  Guide_List({this.type, this.kgPerWeek, this.calories});
+
+  final String type, kgPerWeek, calories;
 
    @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
 
+     final _h = MediaQuery.of(context).size.height;
+     final _w = MediaQuery.of(context).size.width;
+
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Point(
+          triangleHeight: 30.0,
+          edge: Edge.RIGHT,
+          child: Container(
+            padding: EdgeInsets.only(right: 10.0),
+            // margin: EdgeInsets.only(top: 5.0),
+            color: Colors.grey,
+            height: _h*0.1,
+            width: _w*0.48,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(type, style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),),
+                Text("$kgPerWeek Kg/week", style: TextStyle(fontSize: 15 ,color: kBG),),
+
+              ],
+            ),
+          ),
+        ),
+
+        Label(
+          edge: Edge.LEFT,
+          triangleHeight: 30.0,
+          child: Container(
+            margin: EdgeInsets.only(top: 5.0),
+            padding: EdgeInsets.only(left: 10.0),
+            color: kactiveCardColor,
+            height: _h*0.1,
+            width: _w*0.40,
+            child:  Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(calories, style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+                Text("Calories/day", style: TextStyle(fontSize: 15 ,color: kBG),),
+              ],
+            ),
+          ),
+        ),
       ],
     );
-  }
+
+   }
 }

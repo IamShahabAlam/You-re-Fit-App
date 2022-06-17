@@ -24,7 +24,7 @@ BMI_Result_Page({this.bmiResult,this.resultText,this.suggestion});
       appBar: AppBar(
         backgroundColor: kactiveCardColor,
         title: Center(child: Text("BMI Results".toUpperCase(), style: kBMIAppBar,),),
-        leading: AppbarLead(icon: Icons.arrow_back_ios , page: BMI_Page() ,),
+        leading: AppbarLead(color: Colors.white , icon: Icons.arrow_back_ios , page: BMI_Page() ,),
       ),
 
       body: Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly,

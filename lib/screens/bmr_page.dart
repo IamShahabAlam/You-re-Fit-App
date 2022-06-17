@@ -59,7 +59,7 @@ class _BMR_PageState extends State<BMR_Page> {
         title: Center(child: Text("basal metabolic rate".toUpperCase(), style: kBMIAppBar,)),
         leadingWidth: 40.0,
         centerTitle: true,
-        leading: AppbarLead(icon: FontAwesomeIcons.home , page: Home(),)
+        leading: AppbarLead(color: Colors.white , icon: FontAwesomeIcons.home , page: Home(),)
       ),
       body: Column(
         children: [
@@ -290,7 +290,8 @@ class _BMR_PageState extends State<BMR_Page> {
             color: kinactiveCardColor,
             buttonTitle: "CALCULATE BMR",
             onTap: (){
-            BmrCalculator calc = BmrCalculator(height: height, weight: weight , age: age , bmr_a: bmr_a , bmr_h: bmr_h , bmr_w: bmr_w , value: value);
+            BmrCalculator calc = BmrCalculator(
+                height: height, weight: weight , age: age , bmr_a: bmr_a , bmr_h: bmr_h , bmr_w: bmr_w , value: value);
 
             if (selectedGender == Gender.female || selectedGender == Gender.male ) {
               Navigator.push(context, MaterialPageRoute(builder: (context) =>

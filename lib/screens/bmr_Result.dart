@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:youre_fit/components/buttons.dart';
 import 'package:youre_fit/components/conatiners.dart';
@@ -5,6 +6,7 @@ import 'package:youre_fit/components/constants.dart';
 import 'package:youre_fit/screens/bmr_page.dart';
 import 'package:youre_fit/screens/gain_Page.dart';
 import 'package:youre_fit/screens/loss_Page.dart';
+import 'package:youre_fit/components/bmr_brain.dart';
 
 
 class BMR_Result_Page extends StatelessWidget {
@@ -15,6 +17,13 @@ class BMR_Result_Page extends StatelessWidget {
   final String suggestion;
   final String SVal , LactVal, MVal, AVal, IVal;
 
+  double value ;
+  double bmr_w ;
+  double bmr_h ;
+  double bmr_a ;
+  double height = 5;
+  int weight = 50;
+  int age = 20;
 
 
 
@@ -29,7 +38,7 @@ class BMR_Result_Page extends StatelessWidget {
         backgroundColor: kBG,
         appBar: AppBar( backgroundColor: kinactiveCardColor,
           title: Center(child: Text("BMR Results".toUpperCase(), style: kBMIAppBar,),),
-          leading: AppbarLead(icon: Icons.arrow_back_ios, page: BMR_Page(),),
+          leading: AppbarLead(color: Colors.white , icon: Icons.arrow_back_ios, page: BMR_Page(),),
         ),
 
         body: SingleChildScrollView(
@@ -55,14 +64,6 @@ class BMR_Result_Page extends StatelessWidget {
                 ],
               ),
 
-              // ResultCard(
-              //   bgCardClr: kinactiveCardColor,
-              //   resultTextBgClr: kactiveCardColor,
-              //   suggestionBgClr: kBMRactiveCardColor,0
-              //   suggestion: suggestion,
-              //   resultText: resultText,
-              //   resultValue: bmrResult,
-              // ),
 
               BMRResultCard(
                 topText: "Daily calorie needs based on Activity level",
@@ -86,7 +87,12 @@ class BMR_Result_Page extends StatelessWidget {
                   HomeBtn(heightB: 0.08, widthB: 0.4 ,
                     t_margin: 0.0,
                      name: "Weight Loss",
-                    screen: Weight_Loss(),
+                    onpressed:
+                        (){
+                          // BmrCalculator calc = BmrCalculator(height: height, weight: weight , age: age , bmr_a: bmr_a , bmr_h: bmr_h , bmr_w: bmr_w , value: value);
+
+                   Navigator.push(context, MaterialPageRoute(builder: (context) => Weight_Loss(), ));},
+
                     firstClr: Colors.blueGrey[800] ,
                     lastClr : Color(0xFFE65100),
                   ),
@@ -94,7 +100,12 @@ class BMR_Result_Page extends StatelessWidget {
                   HomeBtn(heightB: 0.08, widthB: 0.4 ,
                     t_margin: 0.0,
                     name: "Weight Gain",
-                    screen: Weight_Gain(),
+                    onpressed: (){
+                      // BmrCalculator calc = BmrCalculator(height: height, weight: weight , age: age , bmr_a: bmr_a , bmr_h: bmr_h , bmr_w: bmr_w , value: value);
+
+                      // Navigator.push(context, MaterialPageRoute(builder: (context) => Weight_Gain( SedVal: calc.SedentaryVal(), ), ));
+                      },
+
                     firstClr: Color(0xFFE65100) ,
                     lastClr : Colors.blueGrey[800],
                   ),

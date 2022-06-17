@@ -50,4 +50,4 @@ const KResultActivity = TextStyle(color: kBG, fontSize: 20, fontWeight: FontWeig
 
 
 
-const kweightGuide = TextStyle(color: Color(0xFFFF6C00),fontWeight: FontWeight.w900,fontSize: 35);
+const kweightGuide = TextStyle(color: Color(0xFFFF6C00),fontWeight: FontWeight.w900,fontSize: 30);
