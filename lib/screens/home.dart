@@ -5,23 +5,132 @@ import 'package:youre_fit/screens/bmi_page.dart';
 import 'package:youre_fit/screens/bmr_page.dart';
 import 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
+  @override
+  _HomeState createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+
+  final _advancedDrawerController = AdvancedDrawerController();
+
+
   @override
   Widget build(BuildContext context) {
 
     final _h = MediaQuery.of(context).size.height;
     final _w = MediaQuery.of(context).size.width;
 
-    return Scaffold(
-      backgroundColor: kBG,
-      body: SafeArea(
-        child: Column(
+    return AdvancedDrawer(
+      backdropColor: Colors.blueGrey,
+      controller: _advancedDrawerController,
+      animationCurve: Curves.easeInOut,
+      animationDuration: const Duration(milliseconds: 300),
+      animateChildDecoration: true,
+      rtlOpening: false,
+      // openScale: 1.0,
+      disabledGestures: false,
+      childDecoration: const BoxDecoration(
+        // NOTICE: Uncomment if you want to add shadow behind the page.
+        // Keep in mind that it may cause animation jerks.
+        // boxShadow: <BoxShadow>[
+        //   BoxShadow(
+        //     color: Colors.black12,
+        //     blurRadius: 0.0,
+        //   ),
+        // ],
+        borderRadius: const BorderRadius.all(Radius.circular(16)),
+      ),
+
+      drawer:SafeArea(
+        child: Container(
+          child: ListTileTheme(
+            textColor: Colors.white,
+            iconColor: Colors.white,
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                Container(
+                  width: 128.0,
+                  height: 128.0,
+                  margin: const EdgeInsets.only(
+                    top: 24.0,
+                    bottom: 64.0,
+                  ),
+                  clipBehavior: Clip.antiAlias,
+                  decoration: BoxDecoration(
+                    color: Colors.black26,
+                    shape: BoxShape.circle,
+                  ),
+                  child: Image.asset(
+                    'assets/images/flutter_logo.png',
+                  ),
+                ),
+                ListTile(
+                  onTap: () {},
+                  leading: Icon(Icons.home),
+                  title: Text('Home'),
+                ),
+                ListTile(
+                  onTap: () {},
+                  leading: Icon(Icons.account_circle_rounded),
+                  title: Text('Profile'),
+                ),
+                ListTile(
+                  onTap: () {},
+                  leading: Icon(Icons.favorite),
+                  title: Text('Favourites'),
+                ),
+                ListTile(
+                  onTap: () {},
+                  leading: Icon(Icons.settings),
+                  title: Text('Settings'),
+                ),
+                Spacer(),
+                DefaultTextStyle(
+                  style: TextStyle(
+                    fontSize: 12,
+                    color: Colors.white54,
+                  ),
+                  child: Container(
+                    margin: const EdgeInsets.symmetric(
+                      vertical: 16.0,
+                    ),
+                    child: Text('Terms of Service | Privacy Policy'),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ) ,
+
+      child: Scaffold(
+        backgroundColor: kBG,
+        appBar: AppBar(backgroundColor: kBG, elevation: 0.0,
+          leading:IconButton(
+            onPressed: _handleMenuButtonPressed,
+            icon: ValueListenableBuilder<AdvancedDrawerValue>(
+              valueListenable: _advancedDrawerController,
+              builder: (_, value, __) {
+                return AnimatedSwitcher(
+                  duration: Duration(milliseconds: 250),
+                  child: Icon(
+                    value.visible ? Icons.clear : Icons.menu, color: kactiveCardColor, size: 30.0,
+                    key: ValueKey<bool>(value.visible),
+                  ),
+                );
+              },
+            ),
+          ),
+
+        ),
+        body: Column(
 
           mainAxisSize: MainAxisSize.max ,
           // crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
 // LOGO
-            SizedBox(height: _h*0.1,),
             Align( alignment: Alignment.center,
               child:  Image.asset("assets/Youre-Icon3.png", height: _h*0.25 , width: _w*0.6, )),
 
@@ -53,12 +162,17 @@ class Home extends StatelessWidget {
               firstClr: Colors.blueGrey[800],
             ),
 
-            
+
 
           ],
         ),
       ),
     );
+  }
+  void _handleMenuButtonPressed() {
+    // NOTICE: Manage Advanced Drawer state through the Controller.
+    // _advancedDrawerController.value = AdvancedDrawerValue.visible();
+    _advancedDrawerController.showDrawer();
   }
 }
 
