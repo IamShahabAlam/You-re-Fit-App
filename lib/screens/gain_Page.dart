@@ -42,24 +42,32 @@ class Weight_Gain extends StatelessWidget {
             Column( mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Guide_List(
+                  labelColor: Colors.grey[600] ,
+                  pointColor: kactiveCardColor,
                   type: "Maintain Weight",
                   kgPerWeek: "0",
                   calories: SedVal ,
                 ),
 
                 Guide_List(
+                  labelColor: Colors.grey[600] ,
+                  pointColor: kactiveCardColor,
                   type: "Mild Weight Gain",
                   kgPerWeek: "0.15",
                   calories: MWG,
                 ),
 
                 Guide_List(
+                  labelColor: Colors.grey[600] ,
+                  pointColor: kactiveCardColor,
                   type: "Weight Gain",
                   kgPerWeek: "0.3",
                   calories: WG,
                 ),
 
                 Guide_List(
+                  labelColor: Colors.grey[600] ,
+                  pointColor: kactiveCardColor,
                   type: "Fast Gain",
                   kgPerWeek: "0.5",
                   calories: FWG,

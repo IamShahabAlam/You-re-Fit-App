@@ -307,6 +307,9 @@ class _BMR_PageState extends State<BMR_Page> {
                     MWL: calc.MildWL(),
                     WL: calc.WeightL(),
                     EWL: calc.ExtremeWL(),
+                    MWG: calc.MildWG(),
+                    WG: calc.WeightG(),
+                    FWG: calc.FastWG(),
 
                   ),
               ));

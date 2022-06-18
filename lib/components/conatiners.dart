@@ -229,17 +229,19 @@ class ActivityRow extends StatelessWidget {
 
 class Guide_List extends StatelessWidget {
 
-  Guide_List({this.type, this.kgPerWeek, this.calories});
+  Guide_List({this.type, this.kgPerWeek, this.calories, this.labelColor, this.pointColor});
 
   final String type, kgPerWeek, calories;
+  final Color  labelColor;
+  final Color pointColor;
 
-   @override
+  @override
   Widget build(BuildContext context) {
 
      final _h = MediaQuery.of(context).size.height;
      final _w = MediaQuery.of(context).size.width;
 
-    return Row(
+     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Point(
@@ -248,7 +250,7 @@ class Guide_List extends StatelessWidget {
           child: Container(
             padding: EdgeInsets.only(right: 10.0),
             // margin: EdgeInsets.only(top: 5.0),
-            color: Colors.grey,
+            color: pointColor,
             height: _h*0.1,
             width: _w*0.48,
             child: Column(
@@ -268,7 +270,7 @@ class Guide_List extends StatelessWidget {
           child: Container(
             margin: EdgeInsets.only(top: 5.0),
             padding: EdgeInsets.only(left: 10.0),
-            color: kactiveCardColor,
+            color: labelColor,
             height: _h*0.1,
             width: _w*0.40,
             child:  Column(

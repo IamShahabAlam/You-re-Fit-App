@@ -26,6 +26,11 @@ class BmrCalculator {
   double Wl;
   double Ewl;
 
+  // Weight Gain Percentage
+  double Mwg;
+  double Wg;
+  double Fwg;
+
   String calculateBMR(){
     _bmr =  value + (bmr_w * weight) + (bmr_h * (height*30.48)) - (bmr_a * age)  ;   // height multiplying with 30.48 to convert ft to cm
     return  _bmr.toStringAsFixed(0);  // will take no value after decimal i.e 20
@@ -71,6 +76,24 @@ class BmrCalculator {
   String ExtremeWL(){
     Ewl = (SedVal* 0.55);
     return Ewl.toStringAsFixed(0);
+  }
+
+
+  // Weight Gain Percentage
+
+  String MildWG(){
+    Mwg = (SedVal*1.15);
+    return Mwg.toStringAsFixed(0);
+  }
+
+  String WeightG(){
+    Wg = (SedVal * 1.30);
+    return Wg.toStringAsFixed(0);
+  }
+
+  String FastWG(){
+    Fwg = (SedVal * 1.45);
+    return Fwg.toStringAsFixed(0);
   }
 
 

@@ -10,14 +10,18 @@ import 'package:youre_fit/components/bmr_brain.dart';
 
 
 class BMR_Result_Page extends StatelessWidget {
-  BMR_Result_Page({this.bmrResult,this.resultText,this.suggestion, this.AVal, this.IVal, this.LactVal, this.MVal, this.SVal, this.MWL , this.WL, this.EWL});
+  BMR_Result_Page({this.bmrResult,this.resultText,this.suggestion, this.AVal, this.IVal, this.LactVal, this.MVal, this.SVal, this.MWL , this.WL, this.EWL, this.MWG,this.WG, this.FWG});
 
   final String bmrResult ;
   final String resultText;
   final String suggestion;
   final String SVal , LactVal, MVal, AVal, IVal;
+
   // Weight Loss Percentages
   final String MWL , WL , EWL ;
+
+  // Weight Gain Percentages
+  final String MWG , WG, FWG;
 
   double value ;
   double bmr_w ;
@@ -94,8 +98,6 @@ class BMR_Result_Page extends StatelessWidget {
                      name: "Weight Loss",
                     onpressed:
                         (){
-                          // BmrCalculator calc = BmrCalculator(height: height, weight: weight , age: age , bmr_a: bmr_a , bmr_h: bmr_h , bmr_w: bmr_w , value: value);
-
                    Navigator.push(context, MaterialPageRoute(builder: (context) => Weight_Loss(SedVal: SVal, WL:WL, EWL:EWL ,MWL:MWL ), ));},
 
                     firstClr: Colors.blueGrey[800] ,
@@ -106,9 +108,7 @@ class BMR_Result_Page extends StatelessWidget {
                     t_margin: 0.0,
                     name: "Weight Gain",
                     onpressed: (){
-                      // BmrCalculator calc = BmrCalculator(height: height, weight: weight , age: age , bmr_a: bmr_a , bmr_h: bmr_h , bmr_w: bmr_w , value: value);
-
-                      // Navigator.push(context, MaterialPageRoute(builder: (context) => Weight_Gain( SedVal: calc.SedentaryVal(), ), ));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Weight_Gain(SedVal: SVal, FWG: FWG, MWG: MWG,WG: WG,)));
                       },
 
                     firstClr: Color(0xFFE65100) ,

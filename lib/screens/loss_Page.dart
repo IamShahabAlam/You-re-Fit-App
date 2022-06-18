@@ -42,24 +42,32 @@ import 'package:youre_fit/screens/home.dart';
            Column( mainAxisAlignment: MainAxisAlignment.spaceEvenly,
              children: [
                Guide_List(
+                 labelColor: kactiveCardColor ,
+                 pointColor: Colors.grey[600],
                  type: "Maintain Weight",
                  kgPerWeek: "0",
                  calories: SedVal ,
                ),
 
                Guide_List(
+                 labelColor: kactiveCardColor ,
+                 pointColor: Colors.grey[600],
                  type: "Mild Weight Loss",
                  kgPerWeek: "0.15",
                  calories: MWL,
                ),
 
                Guide_List(
+                 labelColor: kactiveCardColor ,
+                 pointColor: Colors.grey[600],
                  type: "Weight Loss",
                  kgPerWeek: "0.3",
                  calories: WL,
                ),
 
                Guide_List(
+                 labelColor: kactiveCardColor ,
+                 pointColor: Colors.grey[600],
                  type: "Extreme Loss",
                  kgPerWeek: "0.5",
                  calories: EWL,
