@@ -3,6 +3,7 @@ import 'package:youre_fit/components/buttons.dart';
 import 'package:youre_fit/components/constants.dart';
 import 'package:youre_fit/screens/bmi_page.dart';
 import 'package:youre_fit/screens/bmr_page.dart';
+import 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
 
 class Home extends StatelessWidget {
   @override
