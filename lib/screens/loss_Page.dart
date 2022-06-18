@@ -36,7 +36,7 @@ import 'package:youre_fit/screens/home.dart';
 
            Container(
                padding: EdgeInsets.only(right: 15, left : 15,bottom: 35, top: 15.0),
-               child: Text("The results show a number of daily calorie estimates that can be used as a guideline for how many calories to consume each day to maintain, lose weight at a chosen rate.",
+               child: Text("✴️  The results show a number of daily calorie estimates that can be used as a guideline for how many calories to consume each day to maintain, lose weight at a chosen rate.",
                  textAlign: TextAlign.justify , style: TextStyle(fontSize: 16,),)),
 
            Column( mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -65,11 +65,16 @@ import 'package:youre_fit/screens/home.dart';
                  calories: EWL,
                ),
 
+               Container(
+                   padding: EdgeInsets.only(right: 15, left : 15,bottom: 15.0, top: 15.0),
+                   child: Text("✴️  Please consult with a doctor when losing 0.5 kg or more per week consuming less than  1,200 calories a day may harm you.",
+                     textAlign: TextAlign.justify , style: TextStyle(fontSize: 16,),)),
+
                Row( mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 
                  children: [
                  HomeBtn(heightB: 0.07, widthB: 0.4 ,
-                   t_margin: 0.035,
+                   t_margin: 0.01,
                    name: "Home",
                    onpressed: (){
                      Navigator.push(context, MaterialPageRoute(builder: (context) => Home(), ));
@@ -80,7 +85,7 @@ import 'package:youre_fit/screens/home.dart';
                  ),
 
                  HomeBtn(heightB: 0.07, widthB: 0.4 ,
-                   t_margin: 0.035,
+                   t_margin: 0.01,
                    name: "Diet Plan",
                    onpressed: (){
                      Navigator.push(context, MaterialPageRoute(builder: (context) => Diet_Page(), ));
