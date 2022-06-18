@@ -108,7 +108,13 @@ class BMR_Result_Page extends StatelessWidget {
                     t_margin: 0.0,
                     name: "Weight Gain",
                     onpressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => Weight_Gain(SedVal: SVal, FWG: FWG, MWG: MWG,WG: WG,)));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) =>
+                        Weight_Gain(
+                          SedVal: SVal,
+                          FWG: FWG,
+                          MWG: MWG,
+                          WG: WG,
+                    )));
                       },
 
                     firstClr: Color(0xFFE65100) ,

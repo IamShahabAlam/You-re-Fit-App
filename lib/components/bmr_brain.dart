@@ -82,17 +82,17 @@ class BmrCalculator {
   // Weight Gain Percentage
 
   String MildWG(){
-    Mwg = (SedVal*1.15);
+    Mwg = (SedVal*(1.15));
     return Mwg.toStringAsFixed(0);
   }
 
   String WeightG(){
-    Wg = (SedVal * 1.30);
+    Wg = (SedVal * (1.30));
     return Wg.toStringAsFixed(0);
   }
 
   String FastWG(){
-    Fwg = (SedVal * 1.45);
+    Fwg = (SedVal*(1.45));
     return Fwg.toStringAsFixed(0);
   }
 
