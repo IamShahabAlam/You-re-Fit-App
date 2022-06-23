@@ -51,3 +51,11 @@ const KResultActivity = TextStyle(color: kBG, fontSize: 20, fontWeight: FontWeig
 
 
 const kweightGuide = TextStyle(color: Color(0xFFFF6C00),fontWeight: FontWeight.w900,fontSize: 30);
+
+
+// ======================== Weight Guide constants ====================
+
+
+
+const kListHead = TextStyle(fontSize: 18.0 , fontWeight: FontWeight.bold );
+const kListBody = TextStyle(fontSize: 16.0 );
