@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:youre_fit/components/buttons.dart';
 import 'package:youre_fit/components/constants.dart';
 import 'package:youre_fit/screens/bmi_page.dart';
@@ -22,13 +23,12 @@ class _HomeState extends State<Home> {
     final _w = MediaQuery.of(context).size.width;
 
     return AdvancedDrawer(
-      backdropColor: Colors.blueGrey,
+      backdropColor: kinactiveCardColor,
       controller: _advancedDrawerController,
       animationCurve: Curves.easeInOut,
       animationDuration: const Duration(milliseconds: 300),
       animateChildDecoration: true,
       rtlOpening: false,
-      // openScale: 1.0,
       disabledGestures: false,
       childDecoration: const BoxDecoration(
         // NOTICE: Uncomment if you want to add shadow behind the page.
@@ -39,7 +39,7 @@ class _HomeState extends State<Home> {
         //     blurRadius: 0.0,
         //   ),
         // ],
-        borderRadius: const BorderRadius.all(Radius.circular(16)),
+        borderRadius: const BorderRadius.all(Radius.circular(20.0)),
       ),
 
       drawer:SafeArea(
@@ -54,43 +54,61 @@ class _HomeState extends State<Home> {
                   width: 128.0,
                   height: 128.0,
                   margin: const EdgeInsets.only(
-                    top: 24.0,
-                    bottom: 64.0,
+                    top: 30.0,
+                    bottom: 24.0,
                   ),
                   clipBehavior: Clip.antiAlias,
                   decoration: BoxDecoration(
-                    color: Colors.black26,
-                    shape: BoxShape.circle,
+                    // color: Colors.black26,
+                    // shape: BoxShape.circle,
                   ),
                   child: Image.asset(
-                    'assets/images/flutter_logo.png',
+                    'assets/Youre-Icon3.png',
                   ),
                 ),
+
+                // Text("You're Fit App".toUpperCase(), style: TextStyle(fontSize: 25.0 , fontWeight: FontWeight.bold, color: Colors.grey[800]),),
+
+                SizedBox(height: _h*0.05,),
+
                 ListTile(
                   onTap: () {},
-                  leading: Icon(Icons.home),
-                  title: Text('Home'),
+                  leading: Icon(FontAwesomeIcons.solidUser,color: kactiveCardColor, size: 20.0,),
+                  title: Text('Shahab Alam' ,style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),),
+                  subtitle: Text("CSC-18F-025",style: TextStyle(color: kactiveCardColor, fontSize: 16),),
                 ),
+
                 ListTile(
                   onTap: () {},
-                  leading: Icon(Icons.account_circle_rounded),
-                  title: Text('Profile'),
+                  leading: Icon(FontAwesomeIcons.solidUser, color: kactiveCardColor, size: 20.0,),
+                  title: Text('Zaryab Alam',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),),
+                  subtitle: Text("CSC-18F-133",style: TextStyle(color: kactiveCardColor, fontSize: 16),),
                 ),
+
+
+                Divider(color: kactiveCardColor ,),
+
+                SizedBox(height: _h*0.02,),
+
                 ListTile(
                   onTap: () {},
-                  leading: Icon(Icons.favorite),
-                  title: Text('Favourites'),
+                  leading: Icon(FontAwesomeIcons.userGraduate, color: kactiveCardColor, size: 20.0,),
+                  title: Text('Prof.Abdullah Ayub Khan',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18.0),),
+                  // subtitle: Text("CSC-18F-133",style: TextStyle(color: kactiveCardColor, fontSize: 16),),
                 ),
+
                 ListTile(
                   onTap: () {},
-                  leading: Icon(Icons.settings),
-                  title: Text('Settings'),
+                  leading: Icon(FontAwesomeIcons.book, color: kactiveCardColor, size: 20.0,),
+                  title: Text('Mobile Application Development',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 17.0),),
                 ),
+
                 Spacer(),
+
                 DefaultTextStyle(
                   style: TextStyle(
                     fontSize: 12,
-                    color: Colors.white54,
+                    color: Colors.white,
                   ),
                   child: Container(
                     margin: const EdgeInsets.symmetric(
@@ -105,10 +123,11 @@ class _HomeState extends State<Home> {
         ),
       ) ,
 
+
       child: Scaffold(
         backgroundColor: kBG,
         appBar: AppBar(backgroundColor: kBG, elevation: 0.0,
-          leading:IconButton(
+          leading:IconButton(  color: kactiveCardColor, iconSize: 30.0,
             onPressed: _handleMenuButtonPressed,
             icon: ValueListenableBuilder<AdvancedDrawerValue>(
               valueListenable: _advancedDrawerController,
@@ -116,7 +135,7 @@ class _HomeState extends State<Home> {
                 return AnimatedSwitcher(
                   duration: Duration(milliseconds: 250),
                   child: Icon(
-                    value.visible ? Icons.clear : Icons.menu, color: kactiveCardColor, size: 30.0,
+                    value.visible ? Icons.clear : Icons.menu,
                     key: ValueKey<bool>(value.visible),
                   ),
                 );

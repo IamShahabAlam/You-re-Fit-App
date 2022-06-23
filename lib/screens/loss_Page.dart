@@ -7,6 +7,7 @@ import 'package:youre_fit/screens/bmr_Result.dart';
 import 'package:clippy_flutter/clippy_flutter.dart';
 import 'package:youre_fit/components/bmr_brain.dart';
 import 'package:youre_fit/screens/diet_Page.dart';
+import 'package:youre_fit/screens/exercise_Page.dart';
 import 'package:youre_fit/screens/home.dart';
 
 
@@ -81,20 +82,20 @@ import 'package:youre_fit/screens/home.dart';
                Row( mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 
                  children: [
-                 HomeBtn(heightB: 0.07, widthB: 0.4 ,
+                 HomeBtn(heightB: 0.06, widthB: 0.26 ,
                    t_margin: 0.01,
                    name: "Home",
                    onpressed: (){
                      Navigator.push(context, MaterialPageRoute(builder: (context) => Home(), ));
                    },
 
-                   firstClr: kactiveCardColor ,
-                   lastClr : Colors.blueGrey[800],
+                   firstClr: kinactiveCardColor ,
+                   lastClr : kinactiveCardColor,
                  ),
 
-                 HomeBtn(heightB: 0.07, widthB: 0.4 ,
+                 HomeBtn(heightB: 0.06, widthB: 0.26 ,
                    t_margin: 0.01,
-                   name: "Diet Plan",
+                   name: "Diet",
                    onpressed: (){
                      Navigator.push(context, MaterialPageRoute(builder: (context) => Diet_Page(), ));
                    },
@@ -102,7 +103,20 @@ import 'package:youre_fit/screens/home.dart';
                    firstClr: Colors.blueGrey[800] ,
                    lastClr : kactiveCardColor,
                  ),
-               ],)
+
+                   HomeBtn(heightB: 0.06, widthB: 0.26 ,
+                     t_margin: 0.01,
+                     name: "Exercise",
+                     onpressed: (){
+                       Navigator.push(context, MaterialPageRoute(builder: (context) => Exercise(), ));
+                     },
+
+                     firstClr: Colors.blueGrey[800] ,
+                     lastClr : kactiveCardColor,
+                   ),
+
+               ],),
+
 
 
              ],
