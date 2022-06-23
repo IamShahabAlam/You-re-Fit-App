@@ -14,10 +14,8 @@ class _Diet_PageState extends State<Diet_Page> {
 
   // Weight Loss Plan Lists
   var _meal = ["BreakFast", "Snack", "Lunch", "Snack", "Dinner"];
-  var _mealk = ["BreakFast", "Snack", "Lunch", "Snack", "Dinner"];
-  var _mealq = ["BreakFast", "Snack", "Lunch", "Snack", "Dinner"];
-  // var _oneWLPlan = ["All-bran cereal (125) Milk (50)","Cucumber (30)Avocado dip (50)","Grilled cheese with tomato (300)Salad (50)","Walnuts (100)" , "Grilled Chicken (200)Brussel sprouts (100)Quinoa (105)  "];
-  // var _twoWLPlan = ["Granola (120)Greek yogurt (120)Blueberries (40)","Orange (70)","Chicken and vegetable soup (300)Bread (100)","Apple (75)Peanut butter (75)","Steak (375)Mashed potatoes (150) Asparagus (75)",];
+  var _oneWLPlan = ["All-bran cereal (125)\n Milk (50)","Cucumber (30)\nAvocado dip (50)","Grilled cheese (300)\nSalad (50)","Walnuts (100)" , "Grilled Chicken (200)\nBrussel sprouts (100)\nQuinoa (105)  "];
+  var _twoWLPlan = ["Granola (120)\nGreek yogurt (120)\nBlueberries (40)","Orange (70)","Chicken Vegi soup (300)\nBread (100)","Apple (75)\nPeanut butter (75)","Steak (375)\nMashed potatoes (150)\nAsparagus (75)",];
 
   @override
   Widget build(BuildContext context) {
@@ -80,11 +78,11 @@ class _Diet_PageState extends State<Diet_Page> {
                         border: Border(right: BorderSide(color: kactiveCardColor), left: BorderSide(color: kactiveCardColor), bottom: BorderSide(color: kactiveCardColor)) ,
                       ),
 
-                      child: Row( mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      child: Row( mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          Text(_meal[index], style: kListBody),
-                          Text(_mealk[index], style:kListBody),
-                          Text(_mealq[index], style: kListBody),
+                          Text(_meal[index], textAlign: TextAlign.start, style: kListBody), SizedBox(width: _w*0.02,),
+                          Text(_oneWLPlan[index], textAlign: TextAlign.start, style:kListBody),
+                          Text(_twoWLPlan[index], textAlign: TextAlign.start, style: kListBody),
                         ],
                       ),
                     );

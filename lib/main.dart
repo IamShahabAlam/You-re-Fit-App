@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
+import 'package:youre_fit/screens/diet_Page.dart';
 import 'package:youre_fit/screens/home.dart';
 import 'components/constants.dart';
 
@@ -49,7 +50,7 @@ class MyApp extends StatelessWidget {
           ],
         ),
         splashTransition: SplashTransition.fadeTransition,
-        nextScreen: Home(),
+        nextScreen: Diet_Page(),
         //  backgroundColor: Colors.grey,
       ),
     );
