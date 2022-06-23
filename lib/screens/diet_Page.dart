@@ -49,16 +49,35 @@ class _Diet_PageState extends State<Diet_Page> {
 
                 ),
 
+// Heading
                 Container(
                   decoration: BoxDecoration(
-                    border: Border.all(color: kactiveCardColor ,) ,
+                    border: Border.all(color: kactiveCardColor ) ,
                   ),
-                  child: Row(
+
+                  child: Row( mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Text("Meal"),
+                      Text("Meal", style: TextStyle(fontSize: 18.0 , fontWeight: FontWeight.bold )),
+                      Text("1200 Cal Plan", style: TextStyle(fontSize: 18.0 , fontWeight: FontWeight.bold)),
+                      Text("1500 Cal Plan", style: TextStyle(fontSize: 18.0 , fontWeight:  FontWeight.bold)),
                     ],
                   ),
-                )
+                ),
+
+// Body
+              Container(
+                decoration: BoxDecoration(
+                  border: Border.all(color: kactiveCardColor ) ,
+                ),
+
+                child: Row( mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Text("Meal", style: TextStyle(fontSize: 18.0 , fontWeight: FontWeight.bold )),
+                    Text("1200 Cal Plan", style: TextStyle(fontSize: 18.0 , fontWeight: FontWeight.bold)),
+                    Text("1500 Cal Plan", style: TextStyle(fontSize: 18.0 , fontWeight:  FontWeight.bold)),
+                  ],
+                ),
+              ),
 
 
           ],),
