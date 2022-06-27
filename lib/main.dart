@@ -50,7 +50,7 @@ class MyApp extends StatelessWidget {
           ],
         ),
         splashTransition: SplashTransition.fadeTransition,
-        nextScreen: Diet_Page(),
+        nextScreen: Home(),
         //  backgroundColor: Colors.grey,
       ),
     );

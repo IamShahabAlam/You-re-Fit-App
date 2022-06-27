@@ -17,6 +17,10 @@ class _Diet_PageState extends State<Diet_Page> {
   var _oneWLPlan = ["All-bran cereal (125)\n Milk (50)","Cucumber (30)\nAvocado dip (50)","Grilled cheese (300)\nSalad (50)","Walnuts (100)" , "Grilled Chicken (200)\nBrussel sprouts (100)\nQuinoa (105)  "];
   var _twoWLPlan = ["Granola (120)\nGreek yogurt (120)\nBlueberries (40)","Orange (70)","Chicken Vegi soup (300)\nBread (100)","Apple (75)\nPeanut butter (75)","Steak (375)\nMashed potatoes (150)\nAsparagus (75)",];
 
+ // Calories in Desi Food
+  var _desi = ["Chicken Biryani","Beef Biryani","Mutton Karahi","Chicken Karahi","Shami Kabab","Omelete","Roti","Paratha","Puri","Haleem","Kadhi","Malai Boti","Daal Chawal","Lassi","SugarCane Juice","Rooh Afza","Gulab Jamun","Sohan Halwa","Jalebi","Kheer (rice)","Rasmalai","Besan ladoo",];
+  var _desiSS = ["1 plate","1 plate","1 plate","1 plate","2","1 egg","1 (wheat)","1 (wheat)","1","1 plate","1 plate","1 plate","1 plate","1 Glass","1 Glass","1 Glass","1","1 bowl","1","1 bowl","2 pieces","2 pieces",];
+  var _desiCal = ["292","500","266","224","120","94","72","126","101","157","151","104","200","286","270","90","175","399","120","247","320","340",];
 
 
   // Calories in Common Foods
@@ -173,6 +177,67 @@ class _Diet_PageState extends State<Diet_Page> {
                     );
                   }
               ),
+
+
+
+              Label(
+                triangleHeight: 30 ,
+                child: Container(
+                    margin: EdgeInsets.symmetric(vertical: 20),
+                    padding: EdgeInsets.only(right: 30),
+                    color: kactiveCardColor,
+                    height: _h*0.08, width: _w*0.4,
+                    alignment: Alignment.center,
+                    child: Text("Desi Dishes".toUpperCase() , style: TextStyle(fontSize: 18.0,color: kBG, fontWeight: FontWeight.bold),)),
+
+              ),
+// DESI FOOD
+// Heading
+              Container(
+                height: _h*0.06,
+                decoration: BoxDecoration(
+                    border: Border.all(color: kactiveCardColor),
+                    color: kBMRactiveCardColor
+                ),
+
+                child: Row( mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Text("Dishes", style: kListHead),
+                    Text("Serving Size", style: kListHead), //SizedBox(width: _w*0.01,)
+                    Text("Calories", style: kListHead),
+                  ],
+                ),
+              ),
+
+// Body
+
+              ListView.builder(
+                  physics: NeverScrollableScrollPhysics(),  // For Allowing scrolling with in SingleChildScrollView
+                  shrinkWrap: true,             // for using multiple containers in ListView
+                  itemCount: _desi.length,
+                  itemBuilder: (context, index){
+                    return Container(
+                      decoration: BoxDecoration(
+                        border: Border(right: BorderSide(color: kactiveCardColor), left: BorderSide(color: kactiveCardColor), bottom: BorderSide(color: kactiveCardColor)) ,
+                      ),
+
+                      child: Row( mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Container( width: _w*0.25 , margin: EdgeInsets.only(left: _w*0.1,right: _w*0.05),
+                              child: Text(_desi[index], textAlign: TextAlign.start, style: kListBody)),
+
+                          Container( padding: EdgeInsets.symmetric(vertical: 2.0) , width: _w*0.25,
+                              child: Text(_desiSS[index], textAlign: TextAlign.start, style:kListBody)),
+                          //
+                          Container( margin: EdgeInsets.only(left: _w*0.15), width: _w*0.1,
+                              child: Text(_desiCal[index], textAlign: TextAlign.start, style:kListBody)),
+                        ],
+                      ),
+                    );
+                  }
+              ),
+
+              SizedBox(height: _h*0.05,),
 
 
               Label(
