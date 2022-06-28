@@ -1,23 +1,24 @@
 
 import 'package:clippy_flutter/buttcheek.dart';
 import 'package:clippy_flutter/clippy_flutter.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:youre_fit/components/constants.dart';
 
-class Diet_Page extends StatefulWidget {
+class Gain_Diet_Page extends StatefulWidget {
 
   @override
-  _Diet_PageState createState() => _Diet_PageState();
+  _Gain_Diet_PageState createState() => _Gain_Diet_PageState();
 }
 
-class _Diet_PageState extends State<Diet_Page> {
+class _Gain_Diet_PageState extends State< Gain_Diet_Page> {
 
   // Weight Loss Plan Lists
   var _meal = ["BreakFast", "Snack", "Lunch", "Snack", "Dinner"];
-  var _oneWLPlan = ["All-bran cereal (125)\n Milk (50)","Cucumber (30)\nAvocado dip (50)","Grilled cheese (300)\nSalad (50)","Walnuts (100)" , "Grilled Chicken (200)\nBrussel sprouts (100)\nQuinoa (105)  "];
-  var _twoWLPlan = ["Granola (120)\nGreek yogurt (120)\nBlueberries (40)","Orange (70)","Chicken Vegi soup (300)\nBread (100)","Apple (75)\nPeanut butter (75)","Steak (375)\nMashed potatoes (150)\nAsparagus (75)",];
+  var _oneWGPlan = ["All-bran cereal (125)\n Milk (50)","Cucumber (30)\nAvocado dip (50)","Grilled cheese (300)\nSalad (50)","Walnuts (100)" , "Grilled Chicken (200)\nBrussel sprouts (100)\nQuinoa (105)  "];
+  var _twoWGPlan = ["Granola (120)\nGreek yogurt (120)\nBlueberries (40)","Orange (70)","Chicken Vegi soup (300)\nBread (100)","Apple (75)\nPeanut butter (75)","Steak (375)\nMashed potatoes (150)\nAsparagus (75)",];
 
- // Calories in Desi Food
+  // Calories in Desi Food
   var _desi = ["Chicken Biryani","Beef Biryani","Mutton Karahi","Chicken Karahi","Shami Kabab","Omelete","Roti","Paratha","Puri","Haleem","Kadhi","Malai Boti","Daal Chawal","Lassi","SugarCane Juice","Rooh Afza","Gulab Jamun","Sohan Halwa","Jalebi","Kheer (rice)","Rasmalai","Besan ladoo",];
   var _desiSS = ["1 plate","1 plate","1 plate","1 plate","2","1 egg","1 (wheat)","1 (wheat)","1","1 plate","1 plate","1 plate","1 plate","1 Glass","1 Glass","1 Glass","1","1 bowl","1","1 bowl","2 pieces","2 pieces",];
   var _desiCal = ["292","500","266","224","120","94","72","126","101","157","151","104","200","286","270","90","175","399","120","247","320","340",];
@@ -66,43 +67,71 @@ class _Diet_PageState extends State<Diet_Page> {
         child: SafeArea(
           child: Column( crossAxisAlignment: CrossAxisAlignment.start, mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-                ButtCheek(
-                  height: 20,
-                  child: Image.asset("assets/diet.jpg",
-                    height: 200,
-                    width: double.infinity,
-                    fit: BoxFit.cover,
+              Stack(
+                children: [
+                  ButtCheek(
+                    height: 20,
+                    child: Image.asset("assets/gain_diet.jpg",
+                      height: 200,
+                      width: double.infinity,
+                      fit: BoxFit.cover,
+                    ),
                   ),
-                ),
 
-                Label(
-                  triangleHeight: 30 ,
-                  child: Container(
-                      margin: EdgeInsets.symmetric(vertical: 20),
-                      padding: EdgeInsets.only(right: 30),
-                      color: kactiveCardColor,
-                      height: _h*0.08, width: _w*0.4,
-                      alignment: Alignment.center,
-                      child: Text("Meat Plan".toUpperCase() , style: TextStyle(fontSize: 18.0,color: kBG, fontWeight: FontWeight.bold),)),
+                  Positioned( top: 10.0 , left: 10.0,
+                    child: Container(height: 50, width: 50,
+                      child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              primary: Colors.white,
+                              shape: CircleBorder()
+                          ),
+                          onPressed: (){Navigator.pop(context);},
+                          child: Icon(Icons.arrow_back_ios, size: 28.0, color: kBMRactiveCardColor,)),
+                    ),
+                  ),
 
-                ),
+                  Positioned( top: 10.0, right: 10.0,
+                    child: Container( height: 50, width: 50, //padding: EdgeInsets.only(right: 5.0),
+                      decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Colors.white
+                      ),
+                      child: TextButton(
+                          onPressed: (){},
+                          child: Icon(Icons.info_outline, size: 30.0, color: kBMRactiveCardColor,)),
+                    ),
+                  )
+                ],
+              ),
+
+              Label(
+                triangleHeight: 30 ,
+                child: Container(
+                    margin: EdgeInsets.symmetric(vertical: 20),
+                    padding: EdgeInsets.only(right: 30),
+                    color: kactiveCardColor,
+                    height: _h*0.08, width: _w*0.4,
+                    alignment: Alignment.center,
+                    child: Text("Meat Plan".toUpperCase() , style: TextStyle(fontSize: 18.0,color: kBG, fontWeight: FontWeight.bold),)),
+
+              ),
 // 1200 Plan
 // Heading
-                Container(
-                  height: _h*0.06,
-                  decoration: BoxDecoration(
+              Container(
+                height: _h*0.06,
+                decoration: BoxDecoration(
                     border: Border.all(color: kactiveCardColor),
                     color: kBMRactiveCardColor
-                  ),
-
-                  child: Row( mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Text("Meal", style: kListHead),
-                      Text("1200 Cal Plan", style: kListHead), SizedBox(width: _w*0.01,)
-                      // Text("1500 Cal Plan", style: kListHead),
-                    ],
-                  ),
                 ),
+
+                child: Row( mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Text("Meal", style: kListHead),
+                    Text("1200 Cal Plan", style: kListHead), SizedBox(width: _w*0.01,)
+                    // Text("1500 Cal Plan", style: kListHead),
+                  ],
+                ),
+              ),
 
 // Body
 
@@ -122,10 +151,10 @@ class _Diet_PageState extends State<Diet_Page> {
                               child: Text(_meal[index], textAlign: TextAlign.start, style: kListBody)),
 
                           Container( padding: EdgeInsets.symmetric(vertical: 2.0) ,
-                              child: Text(_oneWLPlan[index], textAlign: TextAlign.start, style:kListBody)),
+                              child: Text(_oneWGPlan[index], textAlign: TextAlign.start, style:kListBody)),
                           //
                           // SizedBox( width: _w*0.4,
-                          //     child: Text(_twoWLPlan[index], textAlign: TextAlign.start, style: kListBody)),
+                          //     child: Text(_twoWGPlan[index], textAlign: TextAlign.start, style: kListBody)),
                         ],
                       ),
                     );
@@ -152,7 +181,7 @@ class _Diet_PageState extends State<Diet_Page> {
               ),
 
 // Body
-               ListView.builder(
+              ListView.builder(
                   physics: NeverScrollableScrollPhysics(),  // For Allowing scrolling with in SingleChildScrollView
                   shrinkWrap: true,             // for using multiple containers in ListView
                   itemCount: _meal.length,
@@ -168,10 +197,10 @@ class _Diet_PageState extends State<Diet_Page> {
                               child: Text(_meal[index], textAlign: TextAlign.start, style: kListBody)),
 
                           Container( padding: EdgeInsets.symmetric(vertical: 2.0) ,
-                              child: Text(_twoWLPlan[index], textAlign: TextAlign.start, style:kListBody)),
+                              child: Text(_twoWGPlan[index], textAlign: TextAlign.start, style:kListBody)),
                           //
                           // SizedBox( width: _w*0.4,
-                          //     child: Text(_twoWLPlan[index], textAlign: TextAlign.start, style: kListBody)),
+                          //     child: Text(_twoWGPlan[index], textAlign: TextAlign.start, style: kListBody)),
                         ],
                       ),
                     );
@@ -253,7 +282,7 @@ class _Diet_PageState extends State<Diet_Page> {
               ),
 
 // Calories in Common foods
-            // FRUITS
+              // FRUITS
 // Heading
               Container(
                 height: _h*0.06,
@@ -300,7 +329,7 @@ class _Diet_PageState extends State<Diet_Page> {
               ),
               SizedBox(height: _h*0.05,),
 
-            // Vegetables
+              // Vegetables
 // Heading
               Container(
                 height: _h*0.06,

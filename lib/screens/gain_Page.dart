@@ -8,6 +8,8 @@ import 'package:clippy_flutter/clippy_flutter.dart';
 import 'package:youre_fit/components/bmr_brain.dart';
 import 'package:youre_fit/screens/home.dart';
 
+import 'G_diet_Page.dart';
+
 
 class Weight_Gain extends StatelessWidget {
   Weight_Gain({this.SedVal,this.MWG , this.WG , this.FWG});
@@ -73,23 +75,42 @@ class Weight_Gain extends StatelessWidget {
                   calories: FWG,
                 ),
 
-                // Container(
-                //     padding: EdgeInsets.only(right: 15, left : 15,bottom: 15.0, top: 15.0),
-                //     child: Text("🔶  Please consult with a doctor when losing 0.5 kg or more per week consuming less than  1,200 calories a day may harm you.",
-                //       textAlign: TextAlign.justify , style: TextStyle(fontSize: 16,),)),
+                SizedBox(height: _h*0.08 ,),
 
                 Row( mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 
                   children: [
-                    HomeBtn(heightB: 0.07, widthB: 0.4 ,
-                      t_margin: 0.08,
+                    HomeBtn(heightB: 0.06, widthB: 0.26 ,
+                      t_margin: 0.01,
                       name: "Home",
                       onpressed: (){
                         Navigator.push(context, MaterialPageRoute(builder: (context) => Home(), ));
                       },
 
-                      firstClr: kactiveCardColor ,
-                      lastClr : Colors.blueGrey[800],
+                      firstClr: Colors.grey[600] ,
+                      lastClr : Colors.grey[600],
+                    ),
+
+                    HomeBtn(heightB: 0.06, widthB: 0.26 ,
+                      t_margin: 0.01,
+                      name: "Diet",
+                      onpressed: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => Gain_Diet_Page(), ));
+                      },
+
+                      firstClr: Colors.blueGrey[800] ,
+                      lastClr : kactiveCardColor,
+                    ),
+
+                    HomeBtn(heightB: 0.06, widthB: 0.26 ,
+                      t_margin: 0.01,
+                      name: "Exercise",
+                      onpressed: (){
+                        // Navigator.push(context, MaterialPageRoute(builder: (context) => Exercise(), ));
+                      },
+
+                      firstClr: Colors.blueGrey[800] ,
+                      lastClr : kactiveCardColor,
                     ),
 
                   ],),

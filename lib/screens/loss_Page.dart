@@ -6,7 +6,7 @@ import 'package:youre_fit/components/constants.dart';
 import 'package:youre_fit/screens/bmr_Result.dart';
 import 'package:clippy_flutter/clippy_flutter.dart';
 import 'package:youre_fit/components/bmr_brain.dart';
-import 'package:youre_fit/screens/diet_Page.dart';
+import 'package:youre_fit/screens/L_diet_Page.dart';
 import 'package:youre_fit/screens/exercise_Page.dart';
 import 'package:youre_fit/screens/home.dart';
 
@@ -89,15 +89,15 @@ import 'package:youre_fit/screens/home.dart';
                      Navigator.push(context, MaterialPageRoute(builder: (context) => Home(), ));
                    },
 
-                   firstClr: kinactiveCardColor ,
-                   lastClr : kinactiveCardColor,
+                   firstClr:  Colors.grey[600] ,
+                   lastClr :  Colors.grey[600],
                  ),
 
                  HomeBtn(heightB: 0.06, widthB: 0.26 ,
                    t_margin: 0.01,
                    name: "Diet",
                    onpressed: (){
-                     Navigator.push(context, MaterialPageRoute(builder: (context) => Diet_Page(), ));
+                     Navigator.push(context, MaterialPageRoute(builder: (context) => Loss_Diet_Page(), ));
                    },
 
                    firstClr: Colors.blueGrey[800] ,
