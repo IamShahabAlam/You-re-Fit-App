@@ -13,14 +13,14 @@ class Loss_Exercise extends StatelessWidget {
             children: [
               ButtCheek(
                 height: 20,
-                child: Image.asset("assets/diet.jpg",
+                child: Image.asset("assets/loss_ex.png",
                   height: 200,
                   width: double.infinity,
                   fit: BoxFit.cover,
                 ),
               ),
 
-              Positioned( top: 10.0 , left: 10.0,
+              Positioned( top: 20.0 , left: 10.0,
                 child: Container(height: 50, width: 50,
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
@@ -32,7 +32,7 @@ class Loss_Exercise extends StatelessWidget {
                 ),
               ),
 
-              Positioned( top: 10.0, right: 10.0,
+              Positioned( top: 20.0, right: 10.0,
                 child: Container( height: 50, width: 50, //padding: EdgeInsets.only(right: 5.0),
                   decoration: BoxDecoration(
                       shape: BoxShape.circle,
