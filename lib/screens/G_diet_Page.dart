@@ -15,8 +15,8 @@ class _Gain_Diet_PageState extends State< Gain_Diet_Page> {
 
   // Weight Loss Plan Lists
   var _meal = ["BreakFast", "Snack", "Lunch", "Snack", "Dinner"];
-  var _oneWGPlan = ["All-bran cereal (125)\n Milk (50)","Cucumber (30)\nAvocado dip (50)","Grilled cheese (300)\nSalad (50)","Walnuts (100)" , "Grilled Chicken (200)\nBrussel sprouts (100)\nQuinoa (105)  "];
-  var _twoWGPlan = ["Granola (120)\nGreek yogurt (120)\nBlueberries (40)","Orange (70)","Chicken Vegi soup (300)\nBread (100)","Apple (75)\nPeanut butter (75)","Steak (375)\nMashed potatoes (150)\nAsparagus (75)",];
+  var _oneWGPlan = [" 5 egg Whites (85)\n 2 Slices cheese (56)\n 2/3 cup instant oatmeal (204)\n 1 banana (90)\n 6 oz. chicken breast (187)\n 3/4 cup brown rice  (126)\n"," 1 cup vegetables (48)\n 1 tsp. olive oil (42)\n 6 oz. sliced deli turkey (182)\n 2 Slices cheese (56)"," Grilled cheese (300)\n 4 oz. top round steak\n 1 piece bread (90)\n Peanut butter (75)"," 6 oz. chicken breast (196)\n 4 oz. baked potato (134) \n 1 T sour cream (32)\n ½ cup steamed broccoli (48)" , " Grilled Chicken (200)\n Brussel sprouts (100)\n Quinoa (105)  "];
+  var _twoWGPlan = [" 2 cups Oat Meal (300)\n 5 egg Whites (85)\n Greek yogurt (120)\n Blueberries (40)\n 6 oz. Chicken Breast (284)"," 1/2 cottage cheese (100)\n 1 cup Garden Salad (33)\n 6 oz. Tune (312)\n 2 Apple (162)\n 2 cups Oat Meal (300)"," Chicken Vegi soup (300)\n Bread (100)\n 1 Banana (105)"," Steak (375)\n Mashed potatoes (150)\n Peanut butter (75)"," 2 cups Oat Meal (300)\n 1 cup Cottage Cheese (1 cup)\n 2 Banana (210)",];
 
   // Calories in Desi Food
   var _desi = ["Chicken Biryani","Beef Biryani","Mutton Karahi","Chicken Karahi","Shami Kabab","Omelete","Roti","Paratha","Puri","Haleem","Kadhi","Malai Boti","Daal Chawal","Lassi","SugarCane Juice","Rooh Afza","Gulab Jamun","Sohan Halwa","Jalebi","Kheer (rice)","Rasmalai","Besan ladoo",];
@@ -127,7 +127,7 @@ class _Gain_Diet_PageState extends State< Gain_Diet_Page> {
                 child: Row( mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Text("Meal", style: kListHead),
-                    Text("1200 Cal Plan", style: kListHead), SizedBox(width: _w*0.01,)
+                    Text("2500 Cal Plan", style: kListHead), SizedBox(width: _w*0.01,)
                     // Text("1500 Cal Plan", style: kListHead),
                   ],
                 ),
@@ -174,7 +174,7 @@ class _Gain_Diet_PageState extends State< Gain_Diet_Page> {
                 child: Row( mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Text("Meal", style: kListHead),
-                    Text("1500 Cal Plan", style: kListHead), SizedBox(width: _w*0.01,)
+                    Text("3500 Cal Plan", style: kListHead), SizedBox(width: _w*0.01,)
                     // Text("1500 Cal Plan", style: kListHead),
                   ],
                 ),
@@ -578,6 +578,10 @@ class _Gain_Diet_PageState extends State< Gain_Diet_Page> {
                   }
               ),
               SizedBox(height: _h*0.05,),
+
+              Container(
+                child: Text("Now you know how many calories your favorite foods add to your diet, choose wisely and avoid piling kilos and inches"),
+              )
 
 
             ],),

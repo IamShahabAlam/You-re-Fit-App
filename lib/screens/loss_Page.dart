@@ -89,8 +89,8 @@ import 'package:youre_fit/screens/home.dart';
                      Navigator.push(context, MaterialPageRoute(builder: (context) => Home(), ));
                    },
 
-                   firstClr:  Colors.grey[600] ,
-                   lastClr :  Colors.grey[600],
+                   firstClr:   kactiveCardColor ,
+                   lastClr :   kactiveCardColor,
                  ),
 
                  HomeBtn(heightB: 0.06, widthB: 0.26 ,

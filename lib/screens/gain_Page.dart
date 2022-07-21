@@ -87,10 +87,10 @@ class Weight_Gain extends StatelessWidget {
                         Navigator.push(context, MaterialPageRoute(builder: (context) => Home(), ));
                       },
 
-                      firstClr: Colors.grey[600] ,
-                      lastClr : Colors.grey[600],
+                      firstClr: kactiveCardColor ,
+                      lastClr : kactiveCardColor,
                     ),
-
+// Diet
                     HomeBtn(heightB: 0.06, widthB: 0.26 ,
                       t_margin: 0.01,
                       name: "Diet",
@@ -102,6 +102,7 @@ class Weight_Gain extends StatelessWidget {
                       lastClr : kactiveCardColor,
                     ),
 
+// Exercise
                     HomeBtn(heightB: 0.06, widthB: 0.26 ,
                       t_margin: 0.01,
                       name: "Exercise",
