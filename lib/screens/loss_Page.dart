@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:youre_fit/components/buttons.dart';
 import 'package:youre_fit/components/conatiners.dart';
 import 'package:youre_fit/components/constants.dart';
+import 'package:youre_fit/screens/L_Ex_Page.dart';
 import 'package:youre_fit/screens/bmr_Result.dart';
 import 'package:clippy_flutter/clippy_flutter.dart';
 import 'package:youre_fit/components/bmr_brain.dart';
@@ -108,7 +109,7 @@ import 'package:youre_fit/screens/home.dart';
                      t_margin: 0.01,
                      name: "Exercise",
                      onpressed: (){
-                       Navigator.push(context, MaterialPageRoute(builder: (context) => Exercise(), ));
+                       Navigator.push(context, MaterialPageRoute(builder: (context) => Loss_Exercise(), ));
                      },
 
                      firstClr: Colors.blueGrey[800] ,
