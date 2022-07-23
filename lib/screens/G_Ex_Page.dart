@@ -52,6 +52,30 @@ class _Gain_ExerciseState extends State<Gain_Exercise> {
     ,"Cable rotations (internal and external)"
   ];
 
+  var _fri =[
+    'Back squats'
+    ,'Deadlifts'
+    ,'Leg extensions'
+    ,'Leg curls'
+    ,'Front squats'
+    ,'Good mornings'
+    ,'Weighted lunges'
+    ,'Glute-ham curl'
+  ];
+
+
+  var _sat =[
+    'Seated dumbbell arm curls'
+    ,'Skull crushers'
+    ,'Cable curls'
+    ,'Triceps push-downs'
+    ,'Preacher curls'
+    ,'Triceps extensions'
+    ,'Concentration curls'
+    ,'Triceps dips'
+  ];
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -87,17 +111,6 @@ class _Gain_ExerciseState extends State<Gain_Exercise> {
                   ),
                 ),
 
-                Positioned( top: 20.0, right: 10.0,
-                  child: Container( height: 50, width: 50, //padding: EdgeInsets.only(right: 5.0),
-                    decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.white
-                    ),
-                    child: TextButton(
-                        onPressed: (){},
-                        child: Icon(Icons.info_outline, size: 30.0, color: kBMRactiveCardColor,)),
-                  ),
-                )
               ],
             ),
 
@@ -122,58 +135,6 @@ class _Gain_ExerciseState extends State<Gain_Exercise> {
 
 
 // Gain Exercise
-// Heading
-            Container(
-              height: _h*0.06,
-              decoration: BoxDecoration(
-                  border: Border.all(color: kactiveCardColor),
-                  color: kBMRactiveCardColor
-              ),
-
-              child: Row( mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Text("Exercise", style: kListHead),
-                  // SizedBox(width: _w*0.005,),
-                  Text("Duration", style: kListHead),
-                  // SizedBox(width: _w*0.01,),
-                  Text("Calories", style: kListHead),
-                  // Text("1500 Cal Plan", style: kListHead),
-                ],
-              ),
-            ),
-
-// Body
-
-            ListView.builder(
-                physics: NeverScrollableScrollPhysics(),  // For Allowing scrolling with in SingleChildScrollView
-                shrinkWrap: true,             // for using multiple containers in ListView
-                itemCount: _ex.length,
-                itemBuilder: (context, index){
-                  return Container(
-                    decoration: BoxDecoration(
-                      border: Border(right: BorderSide(color: kactiveCardColor), left: BorderSide(color: kactiveCardColor), bottom: BorderSide(color: kactiveCardColor)) ,
-                    ),
-
-                    child: Row( mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Container( width: _w*0.25 , margin: EdgeInsets.only(left: _w*0.1,right: _w*0.08),
-                            child: Text(_ex[index], textAlign: TextAlign.start, style: kListBody)),
-
-                        Container( padding: EdgeInsets.symmetric(vertical: 5.0 , ) ,
-                            child: Text(_ex_dur[index], textAlign: TextAlign.start, style:kListBody)),
-
-                        //
-                        Container(margin: EdgeInsets.only(left: _w*0.25 ),
-                            child: Text(_ex_cal[index], textAlign: TextAlign.start, style: kListBody)),
-                      ],
-                    ),
-                  );
-                }
-            ),
-
-            SizedBox(height: _h*0.05,),
-
-
 // ====================== Weekly Exercises ==================
 
             Center(
@@ -439,17 +400,17 @@ class _Gain_ExerciseState extends State<Gain_Exercise> {
 
             Container(
               padding: EdgeInsets.symmetric(horizontal: 20.0),
-              child: Text("" , style: TextStyle(fontSize: 18.0,),),
+              child: Text("It's lower body day today and you'll work the quadriceps, hamstrings, gluteal muscles (maximus, minimus, medius), and lower leg.\n\nDo 3 sets of 10-12 exercises with 30-60 seconds rest between." , style: TextStyle(fontSize: 18.0,),),
             ),
 
             ListView.builder(
                 physics: NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
-                itemCount: _tue.length,
+                itemCount: _fri.length,
                 itemBuilder: (context , index){
                   return Padding(
                     padding: const EdgeInsets.symmetric(horizontal : 20.0,vertical: 5.0),
-                    child: Text("●\t\t${_tue[index]}", style: TextStyle(fontSize: 18),),
+                    child: Text("●\t\t${_fri[index]}", style: TextStyle(fontSize: 18),),
                   );
                 }
             ),
@@ -468,7 +429,7 @@ class _Gain_ExerciseState extends State<Gain_Exercise> {
                       color: kactiveCardColor,
                       height: _h*0.08, width: _w*0.4,
                       alignment: Alignment.center,
-                      child: Text("day".toUpperCase() , style: TextStyle(fontSize: 18.0,color: kBG, fontWeight: FontWeight.bold),)),
+                      child: Text("Saturday".toUpperCase() , style: TextStyle(fontSize: 18.0,color: kBG, fontWeight: FontWeight.bold),)),
 
                 ),
 
@@ -484,7 +445,7 @@ class _Gain_ExerciseState extends State<Gain_Exercise> {
                     height: _h*0.1,
                     width: _w*0.48,
                     child:
-                    Text("BAck".toUpperCase(), style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),),
+                    Text("Arms".toUpperCase(), style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),),
                   ),
                 ),
 
@@ -493,17 +454,17 @@ class _Gain_ExerciseState extends State<Gain_Exercise> {
 
             Container(
               padding: EdgeInsets.symmetric(horizontal: 20.0),
-              child: Text("" , style: TextStyle(fontSize: 18.0,),),
+              child: Text("Since you've already worked the muscles in your shoulder area, arm day will target the biceps and triceps.\n\nDo 3 sets of 10-12 exercises with 30-60 seconds rest between. If you change the order of the exercises be sure that you alternate the biceps and triceps exercises." , style: TextStyle(fontSize: 18.0,),),
             ),
 
             ListView.builder(
                 physics: NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
-                itemCount: _tue.length,
+                itemCount: _sat.length,
                 itemBuilder: (context , index){
                   return Padding(
                     padding: const EdgeInsets.symmetric(horizontal : 20.0,vertical: 5.0),
-                    child: Text("●\t\t${_tue[index]}", style: TextStyle(fontSize: 18),),
+                    child: Text("●\t\t${_sat[index]}", style: TextStyle(fontSize: 18),),
                   );
                 }
             ),
@@ -522,7 +483,7 @@ class _Gain_ExerciseState extends State<Gain_Exercise> {
                       color: kactiveCardColor,
                       height: _h*0.08, width: _w*0.4,
                       alignment: Alignment.center,
-                      child: Text("day".toUpperCase() , style: TextStyle(fontSize: 18.0,color: kBG, fontWeight: FontWeight.bold),)),
+                      child: Text("sunday".toUpperCase() , style: TextStyle(fontSize: 18.0,color: kBG, fontWeight: FontWeight.bold),)),
 
                 ),
 
@@ -538,7 +499,7 @@ class _Gain_ExerciseState extends State<Gain_Exercise> {
                     height: _h*0.1,
                     width: _w*0.48,
                     child:
-                    Text("BAck".toUpperCase(), style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),),
+                    Text("Rest".toUpperCase(), style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),),
                   ),
                 ),
 
@@ -547,19 +508,19 @@ class _Gain_ExerciseState extends State<Gain_Exercise> {
 
             Container(
               padding: EdgeInsets.symmetric(horizontal: 20.0),
-              child: Text("" , style: TextStyle(fontSize: 18.0,),),
+              child: Text("Again, take advantage of active recovery on this rest day. You might also want to use this day off to do meal prep for the week or set up a training journal to track your progress." , style: TextStyle(fontSize: 18.0,),),
             ),
 
-            ListView.builder(
-                physics: NeverScrollableScrollPhysics(),
-                shrinkWrap: true,
-                itemCount: _tue.length,
-                itemBuilder: (context , index){
-                  return Padding(
-                    padding: const EdgeInsets.symmetric(horizontal : 20.0,vertical: 5.0),
-                    child: Text("●\t\t${_tue[index]}", style: TextStyle(fontSize: 18),),
-                  );
-                }
+
+// PRECAUTIONS
+            Container(
+                alignment: Alignment.center,
+                margin: EdgeInsets.only(top: 20, bottom: 20.0),
+                child: Text("Precautions" , style: TextStyle(fontSize: 25.0 , color: kBMRactiveCardColor,fontWeight: FontWeight.bold),)),
+
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 20.0),
+              child: Text("\t\t\t\t\t Lastly, listen to your body. Stop exercising if you feel acute pain and check with your healthcare provider if it persists. Adjust weights, sets and reps and rest intervals to suit your current level of fitness." , style: TextStyle(fontSize: 18.0,),),
             ),
 
             SizedBox(height: _h*0.05,),

@@ -55,17 +55,6 @@ class _Loss_ExerciseState extends State<Loss_Exercise> {
                   ),
                 ),
 
-                Positioned( top: 20.0, right: 10.0,
-                  child: Container( height: 50, width: 50, //padding: EdgeInsets.only(right: 5.0),
-                    decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.white
-                    ),
-                    child: TextButton(
-                        onPressed: (){},
-                        child: Icon(Icons.info_outline, size: 30.0, color: kBMRactiveCardColor,)),
-                  ),
-                )
               ],
             ),
 

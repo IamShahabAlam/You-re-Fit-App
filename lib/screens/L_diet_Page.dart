@@ -90,17 +90,6 @@ class _Loss_Diet_PageState extends State< Loss_Diet_Page> {
                       ),
                     ),
 
-                    Positioned( top: 10.0, right: 10.0,
-                      child: Container( height: 50, width: 50, //padding: EdgeInsets.only(right: 5.0),
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Colors.white
-                        ),
-                        child: TextButton(
-                            onPressed: (){},
-                            child: Icon(Icons.info_outline, size: 30.0, color: kBMRactiveCardColor,)),
-                      ),
-                    )
                   ],
                 ),
 
