@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+
     return MaterialApp(
       // theme: ThemeData.dark(),
       debugShowCheckedModeBanner: false,
@@ -19,35 +20,53 @@ class MyApp extends StatelessWidget {
         backgroundColor: kBG,
         splashIconSize: 800,
 
-        splash: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            SizedBox(
-              height: 30,
-            ),
-            Container(
-              height: 200,
-              width: 200,
-              child: Image.asset(
-                "assets/Youre-Icon3.png",
+        splash: SafeArea(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+
+              Container(
+                margin: EdgeInsets.symmetric(vertical: 50.0),
+                height: 200,
+                width: 200,
+                child: Image.asset(
+                  "assets/Youre-Icon3.png",
+                ),
               ),
-            ),
-            SizedBox(
-              height: 40,
-            ),
-            Text(
-              "FINAL YEAR PROJECT",
-              style: TextStyle(
-                  color: Colors.grey[700],
-                  fontWeight: FontWeight.bold,
-                  letterSpacing: 1.5),
-            ),
-            SizedBox(
-                width: 80,
-                child: Divider(
-                  color: Colors.grey[700],
-                ))
-          ],
+
+              Text(
+                "You're Fit App",
+                style: TextStyle(
+                    color: kactiveCardColor,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 30.0,
+                    shadows: [Shadow(
+                      offset: Offset(2.0, 2.0),
+                      blurRadius: 3.0,
+                      color: Colors.grey,
+                    )],
+                    letterSpacing: 1.5),
+              ),
+
+              SizedBox(
+                height: 240,
+              ),
+
+              Text(
+                "FINAL YEAR PROJECT",
+                style: TextStyle(
+                    color: Colors.grey[700],
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 1.5),
+              ),
+              SizedBox(
+                  width: 80,
+                  child: Divider(
+                    thickness: 1.5,
+                    color: Colors.grey[700],
+                  ))
+            ],
+          ),
         ),
         splashTransition: SplashTransition.fadeTransition,
         nextScreen: Home(),
