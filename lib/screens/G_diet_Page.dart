@@ -568,12 +568,7 @@ class _Gain_Diet_PageState extends State< Gain_Diet_Page> {
               ),
               SizedBox(height: _h*0.05,),
 
-              Container(
-                child: Text("Now you know how many calories your favorite foods add to your diet, choose wisely and avoid piling kilos and inches"),
-              )
-
-
-            ],),
+        ],),
         ),
       ),
     );

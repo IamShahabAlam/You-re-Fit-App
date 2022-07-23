@@ -69,7 +69,7 @@ class _HomeState extends State<Home> {
 
                 // Text("You're Fit App".toUpperCase(), style: TextStyle(fontSize: 25.0 , fontWeight: FontWeight.bold, color: Colors.grey[800]),),
 
-                SizedBox(height: _h*0.05,),
+                SizedBox(height: _h*0.03,),
 
                 ListTile(
                   onTap: () {},
@@ -85,6 +85,13 @@ class _HomeState extends State<Home> {
                   subtitle: Text("CSC-18F-133",style: TextStyle(color: kactiveCardColor, fontSize: 16),),
                 ),
 
+                ListTile(
+                  onTap: () {},
+                  leading: Icon(FontAwesomeIcons.solidUser, color: kactiveCardColor, size: 20.0,),
+                  title: Text('Misbah Shabbir',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),),
+                  subtitle: Text("CSC-21S-169",style: TextStyle(color: kactiveCardColor, fontSize: 16),),
+                ),
+
 
                 Divider(color: kactiveCardColor ,),
 
@@ -93,14 +100,14 @@ class _HomeState extends State<Home> {
                 ListTile(
                   onTap: () {},
                   leading: Icon(FontAwesomeIcons.userGraduate, color: kactiveCardColor, size: 20.0,),
-                  title: Text('Prof.Abdullah Ayub Khan',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18.0),),
+                  title: Text('Prof. Ameen Chahjro',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18.0),),
                   // subtitle: Text("CSC-18F-133",style: TextStyle(color: kactiveCardColor, fontSize: 16),),
                 ),
 
                 ListTile(
                   onTap: () {},
                   leading: Icon(FontAwesomeIcons.book, color: kactiveCardColor, size: 20.0,),
-                  title: Text('Mobile Application Development',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 17.0),),
+                  title: Text('Final Year Project',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 17.0),),
                 ),
 
                 Spacer(),
