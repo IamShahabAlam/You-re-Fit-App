@@ -14,12 +14,13 @@ Session (2018 - 2022)
 - Wight Gain Guide 
 - Diet Plan and Exercises for both.
 - 13 Screens
-- Theme Colors:
-  -Bg Color  Color(0xFFF3E8DB)
-  -Min color Color(0xFFFF9800) or Colors.orange[500]
-  -Dark main Color(0xFFE65100) or Colors.orange[900]
-  -Grey color Color(0xFF7E7777)
-  -Dark grey color Color(0xFF3D4348)
+
+### Theme Colors:
+  - Bg Color  Color(0xFFF3E8DB)
+  - Min color Color(0xFFFF9800) or Colors.orange[500]
+  - Dark main Color(0xFFE65100) or Colors.orange[900]
+  - Grey color Color(0xFF7E7777)
+  - Dark grey color Color(0xFF3D4348)
 
 ## Demonstration
 
