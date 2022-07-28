@@ -1,7 +1,7 @@
 # Youre_fit App
 
-BMI and BMR App (Flutter 2.0)
-Final Year Project For BsCS from SMI University.
+BMI and BMR App (Flutter 2.0)\n
+Final Year Project For BsCS from SMI University.\n
 Session (2018 - 2022)
 
 ## Features
