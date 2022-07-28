@@ -28,7 +28,7 @@ Session (2018 - 2022)
 
 
 
-<img align="left" height="300px" width="150px" src="https://user-images.githubusercontent.com/82330891/181634315-981af1d1-dd30-4dde-90c0-a702dadd83ed.png" />
+<img align="center" height="300px" width="150px" src="https://user-images.githubusercontent.com/82330891/181634315-981af1d1-dd30-4dde-90c0-a702dadd83ed.png" />
 <img align="left" height="600px" width="300px" src="" />
 <img align="left" height="600px" width="300px" src="" />
 <img align="left" height="600px" width="300px" src="" />
