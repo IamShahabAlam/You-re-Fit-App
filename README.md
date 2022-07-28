@@ -6,8 +6,8 @@ Session (2018 - 2022)
 
 ## Features
 
-- Firebase Database
-- Firebase Authentication
+- Body Mass Index
+- Basal Metabolic Rate
 - Email Signup
 - Phone Signup
 - OTP Verification
