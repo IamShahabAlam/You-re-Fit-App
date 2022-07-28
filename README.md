@@ -1,4 +1,4 @@
-# youre_fit
+# Youre_fit App
 
 A new Flutter project.
 
