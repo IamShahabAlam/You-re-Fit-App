@@ -35,12 +35,10 @@ Session (2018 - 2022)
 <img align="left" height="600px" width="300px" src="https://user-images.githubusercontent.com/82330891/185190310-06971350-03d3-4108-a8b9-32b4d8ae2cd4.png" />
 <img align="left" height="600px" width="300px" src="https://user-images.githubusercontent.com/82330891/185190312-e6e04880-4702-4b9e-8c40-a26850821070.png" /> 
 <img align="left" height="600px" width="300px" src="https://user-images.githubusercontent.com/82330891/185190314-e97a3e5b-f2f6-4586-8588-3a4549f46bfc.png" />
-<img align="left" height="600px" width="300px" src="" />
-<img align="left" height="600px" width="300px" src="" />
-<img align="left" height="600px" width="300px" src="" /> 
-<img align="left" height="600px" width="300px" src="" />
-<img align="left" height="600px" width="300px" src="" />
-<img align="left" height="600px" width="300px" src="" />
+<img align="left" height="600px" width="300px" src="https://user-images.githubusercontent.com/82330891/185190318-52cd1dc5-e86e-40b4-af57-72f927a45e12.png" />
+<img align="left" height="600px" width="300px" src="https://user-images.githubusercontent.com/82330891/185190321-10bc8b84-4ed8-4638-aa96-d578af17ed2c.png" />
+<img height="600px" width="300px" src="https://user-images.githubusercontent.com/82330891/185190323-cce6bcc3-0de1-421d-b57e-4e6300d1af8b.png" /> 
+
 <br/>
 
 
@@ -76,8 +74,9 @@ Session (2018 - 2022)
 
 </a>
             </div>
+             &nbsp;
             
-<!-- ### For Assistance
-- Watch this <a href="https://youtu.be/W19IfZ-nqB8"> video </a> <br/> -->
+### For Assistance
+- FOLLOW <a href="https://github.com/IamShahabAlam"> HERE </a> <br/>
 
 > :blue_heart: &nbsp; Fluttering
